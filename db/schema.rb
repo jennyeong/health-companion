@@ -26,8 +26,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_075028) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_reports_on_user_id"
+   end
 
   create_table "medicines", force: :cascade do |t|
+
     t.string "name"
     t.string "batch"
     t.date "exp_date"
@@ -36,6 +38,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_075028) do
     t.string "serial_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+
+  create_table "reminders", force: :cascade do |t|
+    t.integer "interval"
+    t.date "start_date"
+    t.date "end_date"
+    t.time "start_time"
+    t.time "end_time"
+    t.integer "dosage"
+    t.text "med_name"
+    t.text "description"
+    t.bigint "user_id"
+    t.bigint "medicine_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["medicine_id"], name: "index_reminders_on_medicine_id"
+    t.index ["user_id"], name: "index_reminders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,4 +71,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_075028) do
   end
 
   add_foreign_key "reports", "users"
+  add_foreign_key "reminders", "medicines"
+  add_foreign_key "reminders", "users"
 end
