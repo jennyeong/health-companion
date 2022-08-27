@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_27_085000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "medicines", force: :cascade do |t|
-    t.text "med_name"
-    t.text "batch"
+
+    t.string "name"
+    t.string "batch"
     t.date "exp_date"
     t.date "mfg_date"
-    t.text "manufacturer"
-    t.text "seriel_num"
+    t.string "manufacturer"
+    t.string "serial_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 
   create_table "reminders", force: :cascade do |t|
     t.integer "interval"
