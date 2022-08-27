@@ -28,6 +28,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_27_075028) do
     t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
+  create_table "medicines", force: :cascade do |t|
+    t.string "name"
+    t.string "batch"
+    t.date "exp_date"
+    t.date "mfg_date"
+    t.string "manufacturer"
+    t.string "serial_num"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
