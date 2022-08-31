@@ -1,0 +1,5 @@
+<h1>Alerts</h1>
+ <% @reports.each do |report| %>
+    <%= cl_image_tag report.photos.first.key, :transformation => {:width => 200, :height => 200, :crop => "lfill"} %>
+    <%= report.shop_name %>
+  <% end %>
