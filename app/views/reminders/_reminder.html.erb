@@ -1,0 +1,12 @@
+<div id="<%= dom_id reminder %>">
+    <p> Medicine: <%= link_to reminder.medicine.name, reminder.medicine %></p>
+    <p> Interval: <%= reminder.interval %></p>
+    <p> Start Date:  <%= reminder.start_date %></p>
+    <p> End Date:  <%= reminder.end_date %></p>
+    <p> Start Time:  <%= reminder.start_time.strftime("%H:%M") %></p>
+    <p> End Time:  <%= reminder.end_time.strftime("%H:%M") %></p>
+    <p> Dosage:  <%= reminder.dosage %></p>
+    <p> Medicine Name:  <%= reminder.med_name %></p>
+    <p> Decription:  <%= reminder.description %></p>
+    
+</div>
