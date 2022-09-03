@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @reminder %>
+
+<div>
+  <%= link_to "Edit this reminder", edit_reminder_path(@reminder) %> |
+  <%= link_to "Back to reminders", reminders_path %>
+
+  <%= button_to "Destroy this reminder", @reminder, method: :delete %>
+</div>
