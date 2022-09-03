@@ -27,6 +27,7 @@ ScanditSDK.configure(`${licenseKey}`, {
             "code39",
             "code93",
             "itf",
+            "data-matrix",
           ],
           codeDuplicateFilter: 1000,
         }),
