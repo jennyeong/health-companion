@@ -1,10 +1,8 @@
-import dotenv from "dotenv";
-
 var scanditBarcodePicker = document.getElementById("scandit-barcode-picker");
 var barcodeResultElement = document.getElementById("scandit-barcode-result");
 var starterButton = document.getElementById("start-scanner-button");
-
-var licenseKey = dotenv.config(SCANDIT);
+console.log(scanditBarcodePicker);
+var licenseKey = scanditBarcodePicker.dataset.scanditId;
 
 starterButton.addEventListener("click", startBarcodePicker);
 
