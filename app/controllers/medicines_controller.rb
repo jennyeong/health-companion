@@ -1,5 +1,5 @@
 class MedicinesController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [ :scanning]
   def show
   end
 
