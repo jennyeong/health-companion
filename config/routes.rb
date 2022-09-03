@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
-  get '/scanning', to: "pages#scanning"
-  post '/medicine', to: "medicines#scanning"
+  get "/scanning", to: "pages#scanning"
+  post "/medicine", to: "medicines#scanning"
+  get "/successful", to: "pages#successful"
 
   resources :medicines, only: [:show]
   # Defines the root path route ("/")

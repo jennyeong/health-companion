@@ -1,11 +1,13 @@
 class MedicinesController < ApplicationController
+
   def show
   end
 
   def scanning
     # binding.pry
     @barcode = barcode_params
-    puts "Successful"
+    redirect_to successful_path
+    # puts "Successful"
     # binding.pry
   end
 
