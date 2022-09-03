@@ -1,0 +1,25 @@
+<%= simple_form_for (report) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.input :online, as: :boolean %>
+      <%= f.input :shop_url, as: :url %>
+      <%= f.input :shop_name %>
+      <%= f.input :shop_location %>
+      <%= f.input :med_name %>
+      <%= f.input :effects %>
+      <%= f.input :comments %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
+      <% if @report.photos.present? %>
+        <% @report.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, width: 100, height: 100, crop: :fill %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, 'Submit' %>
+    </div>
+  <% end %>

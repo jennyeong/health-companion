@@ -1,8 +1,3 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<% if user_signed_in? && current_user.reminders.sort_by_latest.first.present? %>
-  <p>
-    Remember to take <%= current_user.reminders.sort_by_latest.first.med_name %> in <%= distance_of_time_in_words(Time.current, current_user.reminders.sort_by_latest.first.start_date) %>
-  </p>
-<% end %>
