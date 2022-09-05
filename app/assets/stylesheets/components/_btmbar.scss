@@ -1,8 +1,23 @@
+.btmnav {
+  border-top: 1px solid #6750A4;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .btmnav-list {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
   width: 100%;
-  padding: 21px;
+  padding: 0 21px;
   margin: 0;
+  align-items: center;
+}
+
+.nav-main {
+  border: 12px solid #6750A4;
+  border-radius: 50%;
+  background-color: #6750A4;
 }
