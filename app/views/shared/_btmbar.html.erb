@@ -1,9 +1,17 @@
 <div class="btmnav">
   <ul class="btmnav-list">
-    <li><%= image_tag "home.png", style:"width: 30px; height: 30px" %></li>
-    <li><%= image_tag "list_alt.png", style:"width: 30px; height: 30px" %></li>
-    <li class="nav-main"><%= image_tag "Vector.png", style:"width: 40px; height: 40px" %></li>
-    <li><%= image_tag "warning_amber.png", style:"width: 30px; height: 30px" %></li>
-    <li><%= image_tag "more_horiz.png", style:"width: 30px; height: 30px" %></li>
+    <li><%= link_to image_tag('home.png', width: '30px', height: '30px'), '' %></li>
+    <li><%= link_to image_tag('alarm.png', width: '30px', height: '30px'), 'reminders' %></li>
+    <li class="nav-main"><%= link_to image_tag('Vector.png', width: '40px', height: '40px'), 'scanning' %></li>
+    <li><%= link_to image_tag('warning_amber.png', width: '30px', height: '30px'), 'reports' %></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <%= image_tag "more_horiz.png", style:"width: 30px; height: 30px" %>
+      </a>
+      <ul class="dropdown-menu">
+        <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
+        <li><a class="dropdown-item" href="#">Pharmacies</a></li>
+      </ul>
+    </li>
   </ul>
 </div>
