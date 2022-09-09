@@ -1,7 +1,7 @@
 var scanditBarcodePicker = document.getElementById("scandit-barcode-picker");
 var barcodeResultElement = document.getElementById("scandit-barcode-result");
 var starterButton = document.getElementById("start-scanner-button");
-console.log(scanditBarcodePicker);
+// console.log(scanditBarcodePicker);
 var licenseKey = scanditBarcodePicker.dataset.scanditId;
 
 starterButton.addEventListener("click", startBarcodePicker);
