@@ -7,6 +7,9 @@ import { application } from "./application";
 import HelloController from "./hello_controller";
 application.register("hello", HelloController);
 
+import NavMoreController from "./nav_more_controller"
+application.register("nav-more", NavMoreController)
+
 import OnlineController from "./online_controller";
 application.register("online", OnlineController);
 
