@@ -26,7 +26,8 @@
 .ka.reminder {
   border-radius: 12px;
   background:  #6750A4;
-  border: 1px solid #FFFBFE;
+  border-width: 1px 0px;
+  border-color: #5d42a7;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-between;
@@ -47,4 +48,20 @@
   .ka-left {
     padding: 1rem;
   }
+}
+
+.list-container {
+  p {
+    margin-bottom: 0px;
+  }
+  .list-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    a {
+      text-decoration: none !important;
+    }
+  }
+  margin: 0.4rem auto;
 }
