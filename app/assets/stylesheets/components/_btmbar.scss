@@ -11,13 +11,15 @@
   list-style-type: none;
   justify-content: space-between;
   width: 100%;
-  padding: 2px 21px;
+  padding: 10px 20px;
   margin: 0;
   align-items: center;
 }
 
 .nav-main {
-  border: 12px solid #6750A4;
-  border-radius: 50%;
-  background-color: #6750A4;
+  font-size: 25px;
+}
+
+.fa-ellipsis {
+  color: #6750A4;
 }
