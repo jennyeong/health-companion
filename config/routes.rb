@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "/scanning", to: "pages#scanning"
   post "/medicine", to: "medicines#scanning"
   get "/successful", to: "pages#successful"
+  get "/counterfeit", to: "pages#counterfeit"
+  get "/information", to: "pages#information"
 
   resources :medicines, only: [:show]
   # Defines the root path route ("/")
