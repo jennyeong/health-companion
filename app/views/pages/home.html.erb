@@ -7,12 +7,23 @@
   </div>
 </div>
 
+<div class="list-container">
+  <div class="list-title">
+    <p><strong>Reminders</strong></p>
+    <%= link_to new_reminder_path do %>
+      <i class="fa-solid fa-plus"></i>
+    <% end %>
+  </div>
+  <%= render "shared/card-list-reminder" %>
+</div>
+
+<div class="list-container">
+  <div class="list-title">
+    <p><strong>Alerts</strong></p>
+    <%= link_to reports_path do %>
+      <p>See all</p>
+    <% end %>
+  </div>
+  <%= render "shared/card-list" %>
+</div>
 <%= render "shared/btmbar" %>
-<br>
-<br>
-<%= render "shared/card-list-reminder" %>
-<br>
-<%= render "shared/card-list" %>
-<br>
-<br>
-<br>

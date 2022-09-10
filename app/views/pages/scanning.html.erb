@@ -1,9 +1,5 @@
 <h1>Scanning Page</h1>
 
-<head>
-  <script src="https://cdn.jsdelivr.net/npm/scandit-sdk@5.x"></script>
-</head>
-
 <div class="container" data-controller="scanning">
   <div id="scandit-barcode-picker" data-scandit-id="<%= ENV["SCANDIT"] %>" class="scanner"></div>
   <div id="scandit-barcode-result" class="result-text"></div>
@@ -17,3 +13,5 @@
       <%= f.submit "Search!" %>
   <% end %>
 </div>
+
+<%= render "shared/btmbar" %>
