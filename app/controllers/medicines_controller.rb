@@ -4,11 +4,19 @@ class MedicinesController < ApplicationController
   end
 
   def scanning
-    # binding.pry
     @barcode = barcode_params
-    redirect_to successful_path
-    # puts "Successful"
     # binding.pry
+    # puts @barcode
+    if @barcode[:symbology] == "data-matrix"
+      if @barcode[:data] == Medicine.where(serial_num: @barcode[:data])
+        redirect_to successful_path
+      # binding.pry
+      else
+        redirect_to counterfeit_path
+      end
+    else
+      redirect_to information_path
+    end
   end
 
   private

@@ -63,14 +63,13 @@ ScanditSDK.configure(`${licenseKey}`, {
               medicine: {
                 symbology: scanResult.barcodes[0].symbology,
                 data: scanResult.barcodes[0].data,
-              }
-            })
-          })
-          .then(response => {
+              },
+            }),
+          }).then((response) => {
             if (response.redirected) {
-              window.location.href = response.url
+              window.location.href = response.url;
             }
-          })
+          });
         })
         .on("scanError", (error) => {
           console.error(error);
