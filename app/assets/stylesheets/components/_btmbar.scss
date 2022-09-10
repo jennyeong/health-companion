@@ -17,9 +17,26 @@
 }
 
 .nav-main {
-  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #6750A4;
+  &:hover {
+    background-color: #4c358b;
+  }
 }
 
 .fa-ellipsis {
   color: #6750A4;
+}
+
+.fa-qrcode {
+  color: white;
+}
+
+.fa-gray {
+  color: lightgrey;
 }
