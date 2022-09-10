@@ -6,3 +6,8 @@
 <button id="start-scanner-button" style="display: none">
   Start and show BarcodePicker
 </button>
+
+<%= form_for :medicine, url: medicine_path do  |f| %>
+    <%= f.text_field :data %>
+    <%= f.submit "Search!" %>
+  <% end %>
