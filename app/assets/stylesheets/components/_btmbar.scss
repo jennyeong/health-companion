@@ -1,9 +1,10 @@
 .btmnav {
   border-top: 1px solid #6750A4;
-  height: 70px;
+  height: 60px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: white;
 }
 
 .btmnav-list {
@@ -11,7 +12,7 @@
   list-style-type: none;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 20px;
+  padding: 6px 20px;
   margin: 0;
   align-items: center;
 }

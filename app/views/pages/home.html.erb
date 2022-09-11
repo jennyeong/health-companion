@@ -1,15 +1,15 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random/1000x1000);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/assets/pexels-shvets-production-8413398.jpg');">
   <div class="container">
     <h1>Worry less.</h1>
     <h1>Live healthier.</h1>
-    <p>Welcome to Medsafe</p>
+    <p>Welcome to MedSafe</p>
     <%= render "shared/btn-primary" %>
   </div>
 </div>
 
 <div class="list-container">
   <div class="list-title">
-    <p><strong>Reminders</strong></p>
+    <p><strong>Reminder</strong></p>
     <%= link_to new_reminder_path do %>
       <i class="fa-solid fa-plus"></i>
     <% end %>
@@ -19,11 +19,19 @@
 
 <div class="list-container">
   <div class="list-title">
-    <p><strong>Alerts</strong></p>
+    <p><strong>Latest Alerts</strong></p>
     <%= link_to reports_path do %>
       <p>See all</p>
     <% end %>
   </div>
-  <%= render "shared/card-list" %>
+  <div class="list-cards">
+    <%= render "shared/card-list" %>
+    <%= render "shared/card-list" %>
+    <%= render "shared/card-list" %>
+    <% @reports.each do |report| %>
+      <% @report = report %>
+      <%= render "shared/card-list", object: @report %>
+    <% end %>
+  </div>
 </div>
 <%= render "shared/btmbar" %>
