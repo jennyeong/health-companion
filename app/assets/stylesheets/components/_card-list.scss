@@ -63,5 +63,10 @@
       text-decoration: none !important;
     }
   }
-  margin: 0.4rem auto;
+  .list-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+  }
 }
