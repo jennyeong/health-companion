@@ -25,11 +25,10 @@
         <i class="fa-solid fa-ellipsis fa-xl fa-gray" data-nav-more-target="ellipsis"></i>
         </a>
         <ul class="dropdown-menu">
-          <% if !current_user.nil? %>
-            <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
-          <% end %>
           <% if current_user.nil? %>
             <li><%= link_to "Log in", new_user_session_path, class: "dropdown-item" %></li>
+          <% else %>
+            <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
           <% end %>
           <li><a class="dropdown-item" href="#">Pharmacies</a></li>
         </ul>
