@@ -10,6 +10,7 @@
 # Medicine.create(name: "Bruffen", batch: "0003456", exp_date: "2024-08-08", mfg_date: "2021-05-04", manufacturer: "gSK", serial_num: "12345")
 
 require 'csv'
+# require ''
 
 filepath = "lib/seeds/medicine_seed.csv"
 
@@ -25,6 +26,22 @@ CSV.foreach(filepath, headers: :first_row) do |row|
   manufacturer = row[4]
   serial_num = row[5]
   Medicine.create(name: name, batch: batch, exp_date: exp_date, mfg_date: mfg_date, manufacturer: manufacturer, serial_num: serial_num)
+end
+
+# Seeding pictures based on medicine name
+Medicine.where(name: "Leftose").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Leftose.png'), filename: 'Leftose.png')
+  medicine.save!
+end
+
+Medicine.where(name: "Zyrtec").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Zyrtec.png'), filename: 'Zyrtec.png')
+  medicine.save!
+end
+
+Medicine.where(name: "Human Papillomavirus (HPV) Vaccine").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/HPV.png'), filename: 'HPV.png')
+  medicine.save!
 end
 
 puts "Seeding database complete!"
