@@ -1,10 +1,26 @@
 <div class="ka">
   <div class="ka-left">
-    <h5>Expired Panadol</h5>
-    <p>Johor Bahru, Malaysia</p>
+    <h5><%= @report.shop_name %></h5>
+    <% if @report.online %>
+      <% if @report.shop_url.length < 24  %>
+        <p><%= @report.shop_url %></p>
+      <% else %>
+        <% @report.shop_url[24..-1] = "..." %>
+        <p><%= @report.shop_url %></p>
+      <% end %>
+    <% else %>
+      <% if @report.shop_location.length < 24  %>
+        <p><%= @report.shop_location %></p>
+      <% else %>
+        <% @report.shop_location[24..-1] = "..." %>
+        <p><%= @report.shop_location %></p>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="ka-right">
-    <img src="https://gphb01pdazurefileshare.blob.core.windows.net/sys-master-hybris-media/h90/h03/16431885418526/601435-leftose-tablets-30-tablets-1-800Wx800H" alt="..." style="height: 80px; border-radius: 0 12px 12px 0;">
+    <!-- <img src="https://gphb01pdazurefileshare.blob.core.windows.net/sys-master-hybris-media/h90/h03/16431885418526/601435-leftose-tablets-30-tablets-1-800Wx800H"
+    alt="..." style="height: 80px; border-radius: 0 12px 12px 0;"> -->
+    <%= cl_image_tag @report.photos.first.key, :transformation => {:width => 80, :height => 80, :crop => "lfill"} %>
   </div>
 </div>

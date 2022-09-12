@@ -16,11 +16,21 @@
 
   p {
     margin: 0;
+    white-space: nowrap;
   }
 
   .ka-left {
     padding: 1rem;
+    width: 200px;
   }
+
+  .ka-right {
+    background-color: white;
+    border-radius: 0 12px 12px 0;
+    img {
+    border-radius: 0 12px 12px 0;
+  }
+}
 }
 
 .ka.reminder {
@@ -51,6 +61,7 @@
 }
 
 .list-container {
+  margin-top: 10px;
   p {
     margin-bottom: 0px;
   }
