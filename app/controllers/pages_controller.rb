@@ -9,6 +9,9 @@ class PagesController < ApplicationController
   end
 
   def successful
+    @leftose = Medicine.where(name: "Leftose").first
+    # raise
+    puts @medicine
   end
 
   def counterfeit
