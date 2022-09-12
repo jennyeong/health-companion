@@ -25,11 +25,13 @@
       <p>See all</p>
     <% end %>
   </div>
-  <div class="list-cards">
-    <% @reports.each do |report| %>
-      <% @report = report %>
-      <%= render "shared/card-list", object: @report %>
-    <% end %>
-  </div>
+  <% if !@reports.nil? %>
+    <div class="list-cards">
+      <% @reports.each do |report| %>
+        <% @report = report %>
+        <%= render "shared/card-list", object: @report %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
 <%= render "shared/btmbar" %>
