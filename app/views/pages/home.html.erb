@@ -6,16 +6,17 @@
     <%= render "shared/btn-primary" %>
   </div>
 </div>
-
-<div class="list-container">
-  <div class="list-title">
-    <p><strong>Reminder</strong></p>
-    <%= link_to new_reminder_path do %>
-      <i class="fa-solid fa-plus"></i>
-    <% end %>
+<% if !current_user.nil? %>
+  <div class="list-container">
+    <div class="list-title">
+      <p><strong>Reminder</strong></p>
+      <%= link_to new_reminder_path do %>
+        <i class="fa-solid fa-plus"></i>
+      <% end %>
+    </div>
+    <%= render "shared/card-list-reminder" %>
   </div>
-  <%= render "shared/card-list-reminder" %>
-</div>
+<% end %>
 
 <div class="list-container">
   <div class="list-title">
