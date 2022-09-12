@@ -51,6 +51,7 @@
 }
 
 .list-container {
+  margin-top: 10px;
   p {
     margin-bottom: 0px;
   }
@@ -66,7 +67,7 @@
   .list-cards {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 12px;
 
   }
 }
