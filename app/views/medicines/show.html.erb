@@ -1,13 +1,52 @@
-<div class="results">
-  <div class="d-flex results-pic">
-    <%= image_tag(@medicine.photo) %>
-    <i class="fa-solid fa-circle-check"></i>
-    <p>Imported by <br> Authorized Distributor</p>
+<div class="container">
+  <div class="results">
+    <div class="pharma-info">
+      <p class="name"><%= @medicine.name %></p>
+      <p class="manufacturer"><%= @medicine.manufacturer %></p>
+    </div>
+    <div class="d-flex results-pic">
+      <%= image_tag(@medicine.photo) %>
+    </div>
+    <div class="authorized">
+      <i class="fa-solid fa-circle-check"></i>
+      <p>Imported by Authorized Distributor</p>
+    </div>
+
+    <div class="batch-info">
+      <div class="batch-left">
+        <i class="fa-solid fa-pills"></i>
+      </div>
+      <div class="batch-right">
+        <p>Batch</p>
+        <%= @medicine.batch %>
+      </div>
+    </div>
+
+    <div class="mfg-date">
+      <div class="mfg-left">
+        <i class="fa-solid fa-industry"></i>
+      </div>
+      <div class="mfg-right">
+        <p>Manufacture Date</p>
+        <%= @medicine.mfg_date %>
+      </div>
+    </div>
+
+    <div class="exp-date">
+      <div class="exp-left">
+        <i class="fa-regular fa-calendar-xmark"></i>
+      </div>
+      <div class="exp-right">
+        <p>Expiry Date</p>
+        <%= @medicine.exp_date %>
+      </div>
+    </div>
   </div>
 
-  Brand: <%= @medicine.name %><br>
-  Manufacturer: <%= @medicine.manufacturer %><br>
-  Batch: <%= @medicine.batch %><br>
-  Manufacturing Date: <%= @medicine.mfg_date %><br>
-  Expiry Date: <%= @medicine.exp_date %><br>
+  <%= link_to "/reminders/new" do %>
+    <i class="fa-solid fa-tablets med-reminder"></i>
+    Add medication as reminder
+  <% end %>
+
+
 </div>

@@ -1,6 +1,159 @@
 .results-pic {
   img {
     width: auto;
-    height: 30rem;
+    max-height: 23rem;
+    margin-top: -72px;
+    margin-bottom: -73px;
+    margin-left: -5px;
+  }
+  border: 1px solid #968bb3;
+  border-radius: 25px;
+  border-width: 4px;
+  overflow: hidden;
+}
+
+.pharma-info {
+  .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #553a9b;
+    margin-bottom: 0;
+  }
+  .manufacturer {
+    font-size: 1rem;
+    font-weight: light;
+    color: #2a1c2e;
+    margin: 0px;
+  }
+  background-color: #b2a5d6;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.batch-info {
+  i {
+    align-self: center;
+    font-size: 2rem;
+    width: 50%;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  .batch-left {
+    padding: 1.42rem;
+    border: 1px solid #968bb3;
+    border-radius: 50px 0 0 50px;
+    background-color: #968bb3;
+    text-align: center;
+    width: 9rem;
+  }
+
+  .batch-right {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #968bb3;
+    border-radius: 0 50px 50px 0;
+    text-align: center;
+    width: 11rem;
+  }
+}
+
+.mfg-date {
+  i {
+    align-self: center;
+    font-size: 2rem;
+    width: 50%;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0.5rem;
+
+  .mfg-left {
+    padding: 1.42rem;
+    border: 1px solid #968bb3;
+    border-radius: 50px 0 0 50px;
+    background-color: #968bb3;
+    width: 9rem;
+    text-align: center;
+  }
+  .mfg-right {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #968bb3;
+    border-radius: 0 50px 50px 0;
+    text-align: center;
+  }
+}
+
+.exp-date {
+  i {
+    align-self: center;
+    font-size: 2rem;
+    width: 50%;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0.5rem;
+
+  .exp-left {
+    padding: 1.42rem;
+    border: 1px solid #968bb3;
+    border-radius: 50px 0 0 50px;
+    background-color: #968bb3;
+    width: 9rem;
+    text-align: center;
+  }
+  .exp-right {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #968bb3;
+    border-radius: 0 50px 50px 0;
+    text-align: center;
+    width: 11rem;
+  }
+}
+
+.authorized {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position:
+  i {
+    align-self: center;
+    font-size: 2rem;
+    color: rgb(57, 185, 57);
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+}
+
+.med-reminder {
+  font-size: 1.2rem;
+
+  a {
+    text-decoration: none;
   }
 }
