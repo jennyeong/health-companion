@@ -1,7 +1,5 @@
 .ka {
   border-radius: 12px;
-  background: #F3EDF7;
-  border: 1px solid #FFFBFE;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-between;
@@ -12,16 +10,6 @@
   &:hover {
     transform: scale(1.05);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 4px 8px 2px rgba(0, 0, 0, 0.20);
-  }
-
-  h5 {
-    margin: 0;
-    font-weight: bold;
-  }
-
-  p {
-    margin: 0;
-    white-space: nowrap;
   }
 
   .ka-left {
@@ -35,23 +23,14 @@
     img {
     border-radius: 0 12px 12px 0;
   }
-}
+  }
 }
 
-.ka-reminder {
-  border-radius: 12px;
+.reminders {
   background:  #6750A4;
   border-width: 1px 0px;
   border-color: #5d42a7;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  width: 330px;
-  margin: auto;
   color: white;
-
   h5 {
     margin: 0;
   }
@@ -59,9 +38,19 @@
   p {
     margin: 0;
   }
+}
 
-  .ka-left {
-    padding: 1rem;
+.alerts {
+  background: #F3EDF7;
+  border: 1px solid #FFFBFE;
+  h5 {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+    white-space: nowrap;
   }
 }
 
