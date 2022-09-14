@@ -1,8 +1,12 @@
 <% if !current_page?(root_path) %>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <div class="container-fluid p-0">
-      <%= render "shared/topbar" %>
-      <h2>MedSafe</h2>
+    <div class="container-fluid">
+      <%= link_to :back, class: "navbar-brand" do %>
+        <i class="fa-solid fa-arrow-left"></i>
+      <% end %>
+      <div class = "logo">
+        <h2>MedSafe</h2>
+      </div>
     </div>
   </div>
 <% end %>
