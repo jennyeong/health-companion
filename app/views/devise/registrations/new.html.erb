@@ -3,31 +3,31 @@
     <%= f.error_notification %>
 
       <%= f.input :first_name,
-                  required: true,
+                  required: false,
                   autofocus: true,
                   wrapper_html: { class: 'p'}%>
       <%= f.input :last_name,
-                  required: true,
+                  required: false,
                   autofocus: true,
                   wrapper_html: { class: 'p'}%>
       <%= f.input :username,
-                  required: true,
+                  required: false,
                   autofocus: true,
                   wrapper_html: { class: 'p'}%>
       <%= f.input :contact,
-                  required: true,
+                  required: false,
                   autofocus: true,
                   wrapper_html: { class: 'p'}%>
       <%= f.input :email,
-                  required: true,
+                  required: false,
                   autofocus: true,
                   wrapper_html: { class: 'p'}%>
       <%= f.input :password,
-                  required: true,
+                  required: false,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                   wrapper_html: { class: 'p'}%>
       <%= f.input :password_confirmation,
-                  required: true,
+                  required: false,
                   wrapper_html: { class: 'p'}%>
 
       <%= f.button :submit, "Sign up" %>

@@ -48,69 +48,76 @@
       }
     }
 
-    input {
-      display: block;
-      box-sizing: border-box;
-      width: 100%;
-      outline: none;
-      margin:0;
-      height: 50px;
-    }
-    input[type="text"],
-    input[type="password"] {
-      background: #fff;
-      border: 1px solid #dbdbdb;
-      font-size: 1.6em;
-      padding: .8em .5em;
-      border-radius: 2px;
-    }
-    input[type="text"]:focus,
-    input[type="password"]:focus {
-      background: #fff
-    }
-    span {
-      display:block;
-      background: #F9A5A5;
-      padding: 2px 5px;
-      color: #666;
-    }
-    input[type="submit"] {
-      background: $button;
-      box-shadow: 0 3px 0 0 darken($button, 10%);
-      border-radius: 2px;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      display: block;
-      font-size: 2em;
-      line-height: 1.6em;
-      margin: 2em 0 0;
-      outline: none;
-    }
-    input[type="submit"]:hover {
-      background: #5d43a5;
-      color: white;
-    }
+     input {
+       display: block;
+       box-sizing: border-box;
+       width: 100%;
+       outline: none;
+       margin:0;
+       height: 50px;
+     }
+    // input[type="text"],
+    // input[type="password"] {
+    //   background: #fff;
+    //   border: 1px solid #dbdbdb;
+    //   font-size: 1.6em;
+    //   padding: .8em .5em;
+    //   border-radius: 2px;
+    // }
+    // input[type="text"]:focus,
+    // input[type="password"]:focus {
+    //   background: #fff
+    // }
+    // span {
+    //   display:block;
+    //   background: #F9A5A5;
+    //   padding: 2px 5px;
+    //   color: #666;
+    // }
+     input[type="submit"] {
+       background: $button;
+       box-shadow: 0 3px 0 0 darken($button, 10%);
+       border-radius: 2px;
+       border: none;
+       color: #fff;
+       cursor: pointer;
+       display: block;
+       font-size: 2em;
+       line-height: 1.6em;
+       margin: 2em 0 0;
+       outline: none;
+     }
+     input[type="submit"]:hover {
+       background: #5d43a5;
+       color: white;
+     }
 
-    label{
-      position: absolute;
-      left: 8px;
-      top: 12px;
+    // label{
+    //   position: absolute;
+    //   left: 8px;
+    //   top: 12px;
+    //   color: #999;
+    //   font-size: 16px;
+    //   display: inline-block;
+    //   padding: 0px 10px;
+    //   font-weight: 400;
+    //   background-color: rgba(255,255,255,0);
+    //   @include transition(color .3s, top .3s, background-color .8s);
+    //   &.form-label{
+    //     top: -11px;
+    //     background-color: rgba(255,255,255,1);
+    //     font-size: 14px;
+    //     height: 15px;
+    //     margin-bottom: 0;
+    //     padding: 0;
+    //   }
+    // }
+
+    label {
       color: #999;
       font-size: 16px;
-      display: inline-block;
-      padding: 4px 10px;
       font-weight: 400;
-      background-color: rgba(255,255,255,0);
-      @include transition(color .3s, top .3s, background-color .8s);
-      &.form-label{
-        top: -11px;
-        background-color: rgba(255,255,255,1);
-        font-size: 14px;
-        height: 15px;
-        margin-bottom: 0;
-        padding: 0;
-      }
+
     }
 
   }

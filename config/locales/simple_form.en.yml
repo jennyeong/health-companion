@@ -8,6 +8,23 @@ en:
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
+    placeholders:
+      report:
+        shop_name: 'Shop name'
+        shop_url: 'Shop url'
+        shop_location: 'Shop location'
+        med_name: 'Med name'
+        effects: 'Effects'
+        comments: 'Comments'
+      user:
+        first_name: 'First name'
+        last_name: 'Last name'
+        username: 'Username'
+        contact: 'Contact'
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password Confirmation'
+
     error_notification:
       default_message: "Please review the problems below:"
     # Examples

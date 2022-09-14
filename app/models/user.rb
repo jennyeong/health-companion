@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :reports
   has_many :reminders, dependent: :destroy
+
+  validates :first_name, :last_name, :username, :contact, :email, :password, presence: true
 end
