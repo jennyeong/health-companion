@@ -1,3 +1,13 @@
-<p>successful!</p>
-<%= @medicine.photo %>
-<%= image_tag(@medicine.photo) %>
+<div class="results">
+  <div class="d-flex results-pic">
+    <%= image_tag(@medicine.photo) %>
+    <i class="fa-solid fa-circle-check"></i>
+    <p>Imported by <br> Authorized Distributor</p>
+  </div>
+
+  Brand: <%= @medicine.name %><br>
+  Manufacturer: <%= @medicine.manufacturer %><br>
+  Batch: <%= @medicine.batch %><br>
+  Manufacturing Date: <%= @medicine.mfg_date %><br>
+  Expiry Date: <%= @medicine.exp_date %><br>
+</div>
