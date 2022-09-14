@@ -1,5 +1,15 @@
-<h1>Alerts</h1>
- <% @reports.each do |report| %>
-    <%= cl_image_tag report.photos.first.key, :transformation => {:width => 200, :height => 200, :crop => "lfill"} %>
-    <%= report.shop_name %>
+<%= provide :title, "Alerts" %>
+
+<div class="list-container">
+  <div class="list-title">
+
+  </div>
+  <% if !@reports.nil? %>
+    <div class="list-cards">
+      <% @reports.each do |report| %>
+        <% @report = report %>
+        <%= render "shared/card-list", object: @report %>
+      <% end %>
+    </div>
   <% end %>
+</div>
