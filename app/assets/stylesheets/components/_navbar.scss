@@ -3,6 +3,7 @@
   background: white;
   padding: 0.25rem 0;
   overflow-y:hidden;
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -26,4 +27,13 @@ h2 {
 .navbar-nav .dropdown-menu {
   position: absolute;
   float: none;
+}
+
+.navbar-title {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  h2 {
+    font-weight: bold;
+  }
 }
