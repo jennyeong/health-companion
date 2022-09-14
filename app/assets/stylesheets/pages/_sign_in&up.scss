@@ -14,9 +14,24 @@
     margin: 0px auto;
     box-shadow: 0 0 1em #222;
     border-radius: 2px;
-    .link a {
-      font-size: 12px;
-      text-decoration: none;
+    .shared-links {
+      a {
+        font-size: 12px;
+        text-decoration: none;
+      }
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      p {
+        margin-bottom: 0;
+        margin-right: 5px;
+        font-size: 12px;
+      }
+      a {
+        font-size: 12px;
+        text-decoration: none;
+      }
     }
     h2 {
       margin:0 0 50px 0;
