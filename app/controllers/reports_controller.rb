@@ -17,6 +17,7 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     @report.user = current_user
+    @report.shop_url = @report.shop_url.gsub(%r{https://}, '') if @report.shop_url.include?("https")
     if @report.save
       redirect_to reports_path
     else

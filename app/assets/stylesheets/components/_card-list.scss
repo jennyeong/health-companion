@@ -33,10 +33,12 @@
   color: white;
   h5 {
     margin: 0;
+    white-space: nowrap;
   }
 
   p {
     margin: 0;
+    white-space: nowrap;
   }
 }
 
@@ -46,6 +48,7 @@
   h5 {
     margin: 0;
     font-weight: bold;
+    white-space: nowrap;
   }
 
   p {
