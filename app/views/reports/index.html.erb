@@ -1,7 +1,7 @@
 <%= provide :title, "Alerts" %>
 
 
-<div class="list-container">
+<div class="list-container" data-controller="search-reports">
   <div class="searchbar bar-container">
 
     <%# <form>
@@ -12,23 +12,17 @@
     <form class="nosubmit">
       <input class="nosubmit" type="search" placeholder="Find a report">
     </form>
+    <%= form_with url: reports_path, method: :get, html: {class:
+    "mb-4", data: {search_reports_target: "form"}} do |f| %>
+      <%= f.text_field :query,
+                     class: "form-control",
+                     placeholder: "Find a report",
+                     value: params[:query],
+                     data: {
+                      search_reports_target: "input",
+                      action: "keyup->search-reports#update"
+                      } %>
+    <% end %>
   </div>
-
-  <%= form_with url: reports_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a report"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-
-  <% if !@reports.nil? %>
-    <div class="list-cards">
-      <% @reports.each do |report| %>
-        <% @report = report %>
-        <%= render "shared/card-list", object: @report %>
-      <% end %>
-    </div>
-  <% end %>
+  <%= render "reports/list" %>
 </div>
