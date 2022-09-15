@@ -3,25 +3,24 @@
 
 <div class="list-container" data-controller="search-reports">
   <div class="searchbar bar-container">
-
     <%# <form>
-      <input type="search" placeholder="Search...">
+      <input type="text" placeholder="Search...">
       <button type="submit">Search</button>
     </form> %>
 
-    <form class="nosubmit">
-      <input class="nosubmit" type="search" placeholder="Find a report">
-    </form>
+    <%# <form class="nosubmit">
+      <input class="nosubmit" type="text" placeholder="Find a report">
+    </form> %>
     <%= form_with url: reports_path, method: :get, html: {class:
-    "mb-4", data: {search_reports_target: "form"}} do |f| %>
+    "nosubmit", data: {search_reports_target: "form"}} do |f| %>
       <%= f.text_field :query,
-                     class: "form-control",
+                     class: "nosubmit",
                      placeholder: "Find a report",
                      value: params[:query],
                      data: {
                       search_reports_target: "input",
                       action: "keyup->search-reports#update"
-                      } %>
+                    } %>
     <% end %>
   </div>
   <%= render "reports/list" %>
