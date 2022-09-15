@@ -3,11 +3,11 @@ class ReportsController < ApplicationController
   before_action :set_report, only: %i[show]
 
   def index
-    @reports = Report.all
+    @reports = Report.all.order(created_at: :desc)
+    @reports = Report.search_by_shop_name_and_shop_location(params[:query]) if params[:query].present?
   end
 
   def show
-
   end
 
   def new
