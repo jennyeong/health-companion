@@ -41,4 +41,10 @@
         <%= link_to ('<i class="fa-solid fa-plus fa-xl"></i>').html_safe, new_report_path  %>
       </div>
     <% end %>
+
+    <% if request.path == reminders_path  %>
+      <div class="add-btn">
+        <%= link_to ('<i class="fa-solid fa-plus fa-xl"></i>').html_safe, new_reminder_path  %>
+      </div>
+    <% end %>
 </div>
