@@ -1,15 +1,22 @@
-<h1>Scanning Page</h1>
+<%= provide :title, "Scanning" %>
 
-<div class="container" data-controller="scanning">
+<div data-controller="scanning">
   <div id="scandit-barcode-picker" data-scandit-id="<%= ENV["SCANDIT"] %>" class="scanner"></div>
-  <div id="scandit-barcode-result" class="result-text"></div>
 
-  <button id="start-scanner-button" style="display: none">
-    Start and show BarcodePicker
-  </button>
 
-  <%= form_for :medicine, url: medicine_path do |f| %>
-      <%= f.text_field :data %>
-      <%= f.submit "Search!" %>
-  <% end %>
+  <div class="searchbar bar-container">
+    <div class="search">
+        <button id="start-scanner-button">
+              <i class="fa-solid fa-qrcode fa-xl"></i>
+        </button>
+
+        <%= form_for :medicine, url: medicine_path do |f| %>
+            <%= f.text_field :data,
+                            placeholder: "Type your barcode"
+                            %>
+            <%= f.submit "Search" %>
+        <% end %>
+    </div>
+    <div id="scandit-barcode-result" class="result-text"></div>
+  </div>
 </div>

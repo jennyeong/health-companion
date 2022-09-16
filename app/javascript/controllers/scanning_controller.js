@@ -85,7 +85,7 @@ export default class extends Controller {
               console.error(error);
             })
             .on("ready", () => {
-              barcodeResultElement.innerHTML = "The BarcodePicker is ready!";
+              barcodeResultElement.innerHTML = `<i class="fa-solid fa-circle-check fa-xs"></i> The BarcodePicker is ready!`;
               starterButton.style.display = "inline-block";
             });
         });
