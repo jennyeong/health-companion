@@ -13,7 +13,7 @@ en:
         shop_name: 'Shop name'
         shop_url: 'Shop url'
         shop_location: 'Shop location'
-        med_name: 'Med name'
+        country: 'Country'
         effects: 'Effects'
         comments: 'Comments'
       user:

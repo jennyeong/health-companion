@@ -6,20 +6,30 @@
     <div class="form-inputs" data-controller="online">
       <%= f.input :online,
                   as: :boolean,
-                  input_html: {data: {action: "click->online#update"}}
+                  input_html: {data: { online_target: "boolean",
+                              action: "click->online#update"}}
                   %>
-      <%= f.input :shop_name %>
+      <%= f.input :shop_name,
+                  required: false %>
       <%= f.input :shop_url,
+                  required: false,
                   as: :url,
                   wrapper_html: { class: 'd-none', data: {online_target: "url"} }
                   %>
       <%= f.input :shop_location,
+                  required: false,
                   wrapper_html: { data: {online_target: "loc"} }
                   %>
-      <%= f.input :med_name %>
-      <%= f.input :effects %>
-      <%= f.input :comments %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.input :country, as: :string,
+                  required: false,
+                  wrapper_html: { data: {online_target: "country"} } %>
+      <%= f.input :effects,
+                  required: false %>
+      <%= f.input :comments,
+                  required: false %>
+      <%= f.association :medicine,
+                  required: false %>
+      <%= f.input :photos, required: false, as: :file, input_html: { multiple: true } %>
 
       <% if @report.photos.present? %>
         <% @report.photos.each do |photo| %>

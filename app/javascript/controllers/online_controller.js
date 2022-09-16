@@ -2,23 +2,23 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="online"
 export default class extends Controller {
-  static targets = ["url", "loc"]
+  static targets = ["url", "loc", "boolean", "country"]
 
   connect() {
     // console.log(this.urlTarget)
     // console.log(this.locTarget)
+    // console.log(this.booleanTarget.checked)
   }
 
   update() {
-    this._toggle(this.urlTarget)
-    this._toggle(this.locTarget)
-  }
-
-  _toggle(target) {
-    if (target.classList.value.includes('d-none')) {
-      target.classList.remove('d-none');
+    if (this.booleanTarget.checked) {
+      this.urlTarget.classList.remove('d-none');
+      this.locTarget.classList.add('d-none');
+      this.countryTarget.classList.add('d-none');
     } else {
-      target.classList.add('d-none');
+      this.urlTarget.classList.add('d-none');
+      this.locTarget.classList.remove('d-none');
+      this.countryTarget.classList.remove('d-none');
     }
   }
 }
