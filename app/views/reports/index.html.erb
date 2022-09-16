@@ -1,20 +1,27 @@
 <%= provide :title, "Alerts" %>
 
 
-<div class="list-container">
+<div class="list-container" data-controller="search-reports">
   <div class="searchbar bar-container">
-    <form>
-      <input type="search" placeholder="Search...">
+    <%# <form>
+      <input type="text" placeholder="Search...">
       <button type="submit">Search</button>
-    </form>
-  </div>
+    </form> %>
 
-  <% if !@reports.nil? %>
-    <div class="list-cards">
-      <% @reports.each do |report| %>
-        <% @report = report %>
-        <%= render "shared/card-list", object: @report %>
-      <% end %>
-    </div>
-  <% end %>
+    <%# <form class="nosubmit">
+      <input class="nosubmit" type="text" placeholder="Find a report">
+    </form> %>
+    <%= form_with url: reports_path, method: :get, html: {class:
+    "nosubmit", data: {search_reports_target: "form"}} do |f| %>
+      <%= f.text_field :query,
+                     class: "nosubmit",
+                     placeholder: "Find a report",
+                     value: params[:query],
+                     data: {
+                      search_reports_target: "input",
+                      action: "keyup->search-reports#update"
+                    } %>
+    <% end %>
+  </div>
+  <%= render "reports/list" %>
 </div>

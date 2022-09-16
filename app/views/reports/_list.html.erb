@@ -1,0 +1,10 @@
+<div data-search-reports-target="list">
+    <% if !@reports.nil? %>
+      <div class="list-cards">
+        <% @reports.each do |report| %>
+          <% @report = report %>
+          <%= render "shared/card-list", object: @report %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>

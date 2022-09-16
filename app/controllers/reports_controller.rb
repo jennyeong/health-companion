@@ -3,11 +3,15 @@ class ReportsController < ApplicationController
   before_action :set_report, only: %i[show]
 
   def index
-    @reports = Report.all
+    @reports = Report.all.order(created_at: :desc)
+    @reports = Report.search_by_shop_name_and_shop_location(params[:query]) if params[:query].present?
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "reports/list", locals: {reports: @reports}, formats: [:html] }
+    end
   end
 
   def show
-
   end
 
   def new
@@ -17,6 +21,7 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     @report.user = current_user
+    @report.shop_url = @report.shop_url.gsub(%r{https://}, '') if @report.shop_url.include?("https")
     if @report.save
       redirect_to reports_path
     else

@@ -1,19 +1,24 @@
 <%= link_to report_path(@report) do %>
 <div class="ka alerts">
   <div class="ka-left">
-    <h5><%= @report.shop_name %></h5>
+    <% if @report.shop_name.length < 13 %>
+      <h5><%= @report.shop_name %></h5>
+    <% else %>
+      <% @report.shop_name[13..-1] = "..." %>
+      <h5><%= @report.shop_name %></h5>
+    <% end %>
     <% if @report.online %>
-      <% if @report.shop_url.length < 24  %>
+      <% if @report.shop_url.length < 22  %>
         <p><%= @report.shop_url %></p>
       <% else %>
-        <% @report.shop_url[24..-1] = "..." %>
+        <% @report.shop_url[22..-1] = "..." %>
         <p><%= @report.shop_url %></p>
       <% end %>
     <% else %>
-      <% if @report.shop_location.length < 24  %>
+      <% if @report.shop_location.length < 22  %>
         <p><%= @report.shop_location %></p>
       <% else %>
-        <% @report.shop_location[24..-1] = "..." %>
+        <% @report.shop_location[22..-1] = "..." %>
         <p><%= @report.shop_location %></p>
       <% end %>
     <% end %>
