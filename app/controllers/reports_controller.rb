@@ -36,7 +36,7 @@ class ReportsController < ApplicationController
   end
 
   def report_params
-    params.require(:report).permit(:shop_url, :shop_name, :shop_location, :country, :med_name,
+    params.require(:report).permit(:shop_url, :shop_name, :shop_location, :country, :medicine_id,
                                    :effects, :comments, :online, photos: [])
   end
 end

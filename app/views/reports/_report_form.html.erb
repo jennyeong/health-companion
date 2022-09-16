@@ -29,7 +29,7 @@
                   required: false %>
       <%= f.association :medicine,
                   required: false %>
-      <%= f.input :photos, required: false, as: :file, input_html: { multiple: true } %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 
       <% if @report.photos.present? %>
         <% @report.photos.each do |photo| %>
