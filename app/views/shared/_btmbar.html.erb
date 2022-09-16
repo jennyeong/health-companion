@@ -36,4 +36,9 @@
     </div>
 
   </ul>
+    <% if request.path == reports_path  %>
+      <div class="add-btn">
+        <%= link_to ('<i class="fa-solid fa-plus fa-xl"></i>').html_safe, new_report_path  %>
+      </div>
+    <% end %>
 </div>
