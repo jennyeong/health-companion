@@ -6,6 +6,26 @@
   width: 100%;
   background-color: white;
   z-index: 1;
+  // position: relative;
+  .add-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -70px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #6750A4;
+    &:hover {
+      background-color: #4c358b;
+    }
+
+    .fa-plus {
+      color: white;
+    }
+  }
 }
 
 .btmnav-list {
