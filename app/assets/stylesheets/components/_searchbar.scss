@@ -13,7 +13,7 @@
     border: 1px solid rgba(187, 187, 187, 0.7);
     border-radius: 5px;
     height: 38px;
-    margin: 2px auto;
+    margin: 2px 0;
 
     #start-scanner-button {
       border: none;
@@ -98,7 +98,7 @@
   margin-bottom: 20px;
   .result-text {
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
   }
 }
