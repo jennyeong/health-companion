@@ -1,7 +1,8 @@
 <div class="ka reminders">
   <div class="ka-left">
-    <h5>Take your Panadol</h5>
-    <p>12:00 P.M.</p>
+    <p><small><%= reminder.next_due_timestamp.strftime("%I:%M %p") %></small></p>
+    <h5><%= link_to "#{reminder.medicine.name} in #{distance_of_time_in_words(Time.current, reminder.next_due_timestamp)}", reminder, class: "no-link-decoration" %> </h5>
+    <p><small><%= reminder.description %></small></p>
   </div>
 
   <div class="ka-right">

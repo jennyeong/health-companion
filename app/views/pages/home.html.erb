@@ -6,7 +6,7 @@
     <%= render "shared/btn-primary" %>
   </div>
 </div>
-<% if !current_user.nil? %>
+<% if !current_user.nil? && Reminder.sort_by_latest.exists? %>
   <div class="list-container">
     <div class="list-title">
       <p><strong>Reminder</strong></p>
@@ -14,7 +14,7 @@
         <i class="fa-solid fa-plus"></i>
       <% end %>
     </div>
-    <%= render "shared/card-list-reminder" %>
+    <%= render partial: "shared/card-list-reminder", locals: {reminder: Reminder.sort_by_latest.sort{|s| s.next_due_timestamp}.reverse.first} %>
   </div>
 <% end %>
 
