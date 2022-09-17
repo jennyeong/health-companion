@@ -4,7 +4,7 @@ class ReportsController < ApplicationController
 
   def index
     @reports = Report.order(created_at: :desc)
-    @reports = Report.search_by_shop_name_and_shop_location(params[:query]) if params[:query].present?
+    @reports = Report.global_search(params[:query]) if params[:query].present?
     @report = Report.new
     respond_to do |format|
       format.html # Follow regular flow of Rails

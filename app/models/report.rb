@@ -8,8 +8,11 @@ class Report < ApplicationRecord
   validates :shop_url, presence: { if: -> { shop_location.blank? } }
 
   include PgSearch::Model
-  pg_search_scope :search_by_shop_name_and_shop_location,
-  against: [ :shop_name, :shop_location, :shop_url, :med_name ],
+  pg_search_scope :global_search,
+  against: [ :shop_name, :shop_location, :shop_url ],
+    associated_against: {
+      medicine: [ :name, :manufacturer ]
+  },
   using: {
     tsearch: { prefix: true }
   }
