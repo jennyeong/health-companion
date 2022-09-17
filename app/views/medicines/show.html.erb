@@ -18,7 +18,7 @@
       </div>
       <div class="batch-right">
         <p>Batch</p>
-        <%= @medicine.batch %>
+        <%= @serial_num.batch %>
       </div>
     </div>
 
@@ -28,7 +28,7 @@
       </div>
       <div class="mfg-right">
         <p>Manufacture Date</p>
-        <%= @medicine.mfg_date %>
+        <%= @serial_num.mfg_date %>
       </div>
     </div>
 
@@ -38,15 +38,18 @@
       </div>
       <div class="exp-right">
         <p>Expiry Date</p>
-        <%= @medicine.exp_date %>
+        <%= @serial_num.exp_date %>
       </div>
     </div>
   </div>
 
-  <%= link_to "/reminders/new" do %>
-    <i class="fa-solid fa-tablets med-reminder"></i>
-    Add medication as reminder
+  <%= link_to "/reminders/new", class: "med-reminder" do %>
+    <div class="med-reminder-left">
+      <i class="fa-solid fa-tablets"></i>
+    </div>
+    <div class="med-reminder-right">
+      Add medication as reminder
+    </div>
   <% end %>
-
 
 </div>
