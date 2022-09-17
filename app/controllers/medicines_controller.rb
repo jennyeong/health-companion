@@ -1,10 +1,10 @@
 class MedicinesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :scanning, :show ]
-  def show
-    @serial_num = Serialization.find(params[:id])
-    @medicine = Medicine.find(@serial_num.medicine_id)
-    # raise
-  end
+  skip_before_action :authenticate_user!, only: [ :scanning ]
+  # def show
+  #   @serial_num = Serialization.find(params[:id])
+  #   @medicine = Medicine.find(@serial_num.medicine_id)
+  #   # raise
+  # end
 
   def scanning
     @barcode = barcode_params
@@ -15,6 +15,7 @@ class MedicinesController < ApplicationController
         @serial_num = Serialization.find_by(serial_num: "#{@barcode[:data]}")
         @medicine = Medicine.find(@serial_num.medicine_id)
         # binding.pry
+        # raise
         redirect_to serialization_path(@serial_num)
       else
         redirect_to counterfeit_path

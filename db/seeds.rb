@@ -10,12 +10,15 @@
 # Medicine.create(name: "Bruffen", batch: "0003456", exp_date: "2024-08-08", mfg_date: "2021-05-04", manufacturer: "gSK", serial_num: "12345")
 
 require 'csv'
+require 'faker'
 
 filepath_med = "lib/seeds/medicine_seed.csv"
 filepath_serial = "lib/seeds/serialization_seed.csv"
+filepath_offline = "lib/seeds/reports_offline_seed.csv"
 
 puts "Clearing up database..."
 Medicine.destroy_all
+# User.destroy_all
 
 CSV.foreach(filepath_med, headers: :first_row) do |row|
   # puts "#{row[0]}, #{row[1]}, #{row[2]}"
@@ -54,6 +57,34 @@ end
 Medicine.where(name: "Human Papillomavirus (HPV) Vaccine").each do |medicine|
   medicine.photo.attach(io: File.open('app/assets/images/Medicine/HPV.png'), filename: 'HPV.png')
   medicine.save!
+end
+
+puts "Seeding Users next..."
+
+# Seeding Users
+10.times do
+  user = User.new(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    username: Faker::Name.middle_name,
+    contact: Faker::PhoneNumber.phone_number,
+    email: Faker::Internet.email,
+    password: "123456"
+  )
+  user.save!
+end
+
+puts "Seeding reports next..."
+
+CSV.foreach(filepath_offline, headers: :first_row) do |row|
+  shop_name = row[0].to_s
+  shop_location = row[1].to_s
+  country = row[2].to_s
+  effects = row[3].to_s
+  comments = row[4].to_s
+  medicine = Medicine.find_by(name: "#{row[5]}")
+  user = User.offset(rand(User.count)).first
+  Report.create(shop_name: shop_name, shop_location: shop_location, country: country, effects: effects, comments: comments, medicine_id: medicine.id, user_id: user.id)
 end
 
 puts "Seeding database complete!"
