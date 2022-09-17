@@ -1,0 +1,25 @@
+/* Your medicines for today */
+.today-medicine-msg {
+  font-family: $headers-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+
+  /* identical to box height, or 117% */
+
+  color: #000000;
+  .today-text {
+   color: #FAB91F;
+  }
+}
+
+a.no-link-decoration {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+}
+.reminder-heading {
+  font-weight: 600;
+}

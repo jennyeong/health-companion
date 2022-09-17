@@ -65,6 +65,6 @@ class RemindersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reminder_params
-      params.fetch(:reminder, {}).permit(:id, :interval, :start_date, :end_date, :start_time, :end_time, :dosage, :med_name, :description, :user_id, :medicine_id)
+      params.fetch(:reminder, {}).permit(:id, :interval, :start_date, :end_date, :start_time, :end_time, :dosage, :description, :user_id, :medicine_id)
     end
 end

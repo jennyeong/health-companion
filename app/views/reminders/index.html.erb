@@ -1,13 +1,10 @@
-<p style="color: green"><%= notice %></p>
+<div class="text-center mt-3">
+  <p class="today-medicine-msg">Your medicines for <span class="today-text">today</span></p>
+</div>
 
-<h1>Reminders</h1>
-
-<div id="reminders">
-  <% @reminders.sort_by_latest.each do |reminder| %>
-    <%= render reminder %>
-    <p>
-      <%= link_to "Show this reminder", reminder %>
-    </p>
-    <hr/>
+<div class="list-container">
+  <% @reminders.sort_by_latest.sort{|s| s.next_due_timestamp}.reverse.each do |reminder| %>
+    <%= render partial: "shared/card-list-reminder", locals: {reminder: reminder} %>
+    <br/>
   <% end %>
 </div>
