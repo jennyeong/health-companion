@@ -137,7 +137,6 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  position:
   i {
     align-self: center;
     font-size: 2rem;
@@ -152,8 +151,29 @@
 
 .med-reminder {
   font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0.5rem;
 
-  a {
-    text-decoration: none;
+  .med-reminder-left {
+    padding: 1.42rem;
+    border: 1px solid #968bb3;
+    border-radius: 50px 0 0 50px;
+    background-color: #968bb3;
+    width: 9rem;
+    text-align: center;
   }
+  .med-reminder-right {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #968bb3;
+    border-radius: 0 50px 50px 0;
+    text-align: center;
+    width: 11rem;
+    font-size: small;
+  }
+
 }

@@ -1,15 +1,15 @@
 <% if !current_page?(root_path) %>
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <div class="container-fluid">
-    <div class="navbar-title">
-      <%= link_to :back, class: "navbar-brand" do %>
-        <i class="fa-solid fa-arrow-left"></i>
-      <% end %>
-      <h2 class="navbar-brand"><%= yield :title %></h2>
-    </div>
-      <div class = "logo">
-        <h2>MedSafe</h2>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <div class="container-fluid">
+      <div class="navbar-title">
+        <%= link_to :back, class: "navbar-brand" do %>
+          <i class="fa-solid fa-arrow-left"></i>
+        <% end %>
+        <h2 class="navbar-brand"><%= yield :title %></h2>
+      </div>
+        <div class = "logo">
+          <h2>MedSafe</h2>
+        </div>
       </div>
     </div>
-  </div>
 <% end %>

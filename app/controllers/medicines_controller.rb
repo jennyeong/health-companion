@@ -1,7 +1,8 @@
 class MedicinesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :scanning, :show ]
   def show
-    @medicine = Medicine.find(params[:id])
+    @serial_num = Serialization.find(params[:id])
+    @medicine = Medicine.find(@serial_num.medicine_id)
     # raise
   end
 
@@ -10,8 +11,8 @@ class MedicinesController < ApplicationController
     # binding.pry
     # puts @barcode
     # if @barcode[:symbology] == "data-matrix"
-      if Medicine.where(serial_num: @barcode[:data]).exists?
-        @medicine = Medicine.where(serial_num: @barcode[:data])
+      if Serialization.where(serial_num: @barcode[:data]).exists?
+        @medicine = Serialization.where(serial_num: @barcode[:data])
         redirect_to medicine_path(@medicine)
       else
         redirect_to counterfeit_path
