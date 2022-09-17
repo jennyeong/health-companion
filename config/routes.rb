@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/scanning", to: "pages#scanning"
   post "/medicine", to: "medicines#scanning"
-  get "/successful", to: "pages#successful"
   get "/counterfeit", to: "pages#counterfeit"
   get "/information", to: "pages#information"
 
-  resources :medicines, only: [:show]
+  # get "/serializations/:id", to: "serializations#show", path: :successful
+  resources :serializations, only: [:show], path: :successful
   # Defines the root path route ("/")
   # root "articles#index"
 
