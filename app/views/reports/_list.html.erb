@@ -2,8 +2,7 @@
     <% if !@reports.nil? %>
       <div class="list-cards">
         <% @reports.each do |report| %>
-          <% @report = report %>
-          <%= render "shared/card-list", object: @report %>
+          <%= render "shared/card-list", report: report %>
         <% end %>
       </div>
     <% end %>

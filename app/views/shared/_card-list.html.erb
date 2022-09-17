@@ -1,25 +1,25 @@
-<%= link_to report_path(@report) do %>
+<%= link_to report_path(report) do %>
 <div class="ka alerts">
   <div class="ka-left">
-    <% if @report.shop_name.length < 13 %>
-      <h5><%= @report.shop_name %></h5>
+    <% if report.shop_name.length < 13 %>
+      <h5><%= report.shop_name %></h5>
     <% else %>
-      <% @report.shop_name[13..-1] = "..." %>
-      <h5><%= @report.shop_name %></h5>
+      <% report.shop_name[13..-1] = "..." %>
+      <h5><%= report.shop_name %></h5>
     <% end %>
-    <% if @report.online %>
-      <% if @report.shop_url.length < 22  %>
-        <p><%= @report.shop_url %></p>
+    <% if report.online %>
+      <% if report.shop_url.length < 22  %>
+        <p><%= report.shop_url %></p>
       <% else %>
-        <% @report.shop_url[22..-1] = "..." %>
-        <p><%= @report.shop_url %></p>
+        <% report.shop_url[22..-1] = "..." %>
+        <p><%= report.shop_url %></p>
       <% end %>
     <% else %>
-      <% if @report.shop_location.length < 22  %>
-        <p><%= @report.shop_location %></p>
+      <% if report.shop_location.length < 22  %>
+        <p><%= report.shop_location %></p>
       <% else %>
-        <% @report.shop_location[22..-1] = "..." %>
-        <p><%= @report.shop_location %></p>
+        <% report.shop_location[22..-1] = "..." %>
+        <p><%= report.shop_location %></p>
       <% end %>
     <% end %>
   </div>
@@ -27,7 +27,7 @@
   <div class="ka-right">
     <!-- <img src="https://gphb01pdazurefileshare.blob.core.windows.net/sys-master-hybris-media/h90/h03/16431885418526/601435-leftose-tablets-30-tablets-1-800Wx800H"
     alt="..." style="height: 80px; border-radius: 0 12px 12px 0;"> -->
-    <%= cl_image_tag @report.photos.first.key, :transformation => {:width => 80, :height => 80, :crop => "lfill"} %>
+    <%= cl_image_tag report.photos.first.key, :transformation => {:width => 80, :height => 80, :crop => "lfill"} %>
   </div>
 </div>
 <% end %>

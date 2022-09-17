@@ -37,14 +37,14 @@
 
   </ul>
     <% if request.path == reports_path  %>
-      <div class="add-btn">
-        <%= link_to ('<i class="fa-solid fa-plus fa-xl"></i>').html_safe, new_report_path  %>
+      <div class="add-btn" type="button" data-toggle="modal" data-target="#exampleModalLong">
+        <i class="fa-solid fa-plus fa-xl"></i>
       </div>
     <% end %>
 
     <% if request.path == reminders_path  %>
-      <div class="add-btn">
-        <%= link_to ('<i class="fa-solid fa-plus fa-xl"></i>').html_safe, new_reminder_path  %>
+      <div class="add-btn" type="button" data-toggle="modal" data-target="#exampleModalLong">
+        <i class="fa-solid fa-plus fa-xl"></i>
       </div>
     <% end %>
 </div>
