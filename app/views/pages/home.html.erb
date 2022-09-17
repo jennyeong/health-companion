@@ -14,7 +14,7 @@
         <i class="fa-solid fa-plus"></i>
       <% end %>
     </div>
-    <%= render partial: "shared/card-list-reminder", locals: {reminder: Reminder.sort_by_latest.sort{|s| s.next_due_timestamp}.reverse.first} %>
+    <%# <%= render partial: "shared/card-list-reminder", locals: {reminder: Reminder.sort_by_latest.sort{|s| s.next_due_timestamp}.reverse.first} %>
   </div>
 <% end %>
 

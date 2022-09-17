@@ -9,7 +9,7 @@ class Report < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_shop_name_and_shop_location,
-  against: [ :shop_name, :shop_location, :shop_url, :med_name ],
+  against: [ :shop_name, :shop_location, :shop_url ],
   using: {
     tsearch: { prefix: true }
   }
