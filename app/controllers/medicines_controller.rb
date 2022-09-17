@@ -11,9 +11,11 @@ class MedicinesController < ApplicationController
     # binding.pry
     # puts @barcode
     # if @barcode[:symbology] == "data-matrix"
-      if Serialization.where(serial_num: @barcode[:data]).exists?
-        @medicine = Serialization.where(serial_num: @barcode[:data])
-        redirect_to medicine_path(@medicine)
+      if Serialization.where(serial_num: "#{@barcode[:data]}").exists?
+        @serial_num = Serialization.find_by(serial_num: "#{@barcode[:data]}")
+        @medicine = Medicine.find(@serial_num.medicine_id)
+        # binding.pry
+        redirect_to serialization_path(@serial_num)
       else
         redirect_to counterfeit_path
       end
