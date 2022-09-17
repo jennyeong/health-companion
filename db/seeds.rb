@@ -10,23 +10,35 @@
 # Medicine.create(name: "Bruffen", batch: "0003456", exp_date: "2024-08-08", mfg_date: "2021-05-04", manufacturer: "gSK", serial_num: "12345")
 
 require 'csv'
-# require ''
 
-filepath = "lib/seeds/medicine_seed.csv"
+filepath_med = "lib/seeds/medicine_seed.csv"
+filepath_serial = "lib/seeds/serialization_seed.csv"
 
 puts "Clearing up database..."
 Medicine.destroy_all
 
-CSV.foreach(filepath, headers: :first_row) do |row|
+CSV.foreach(filepath_med, headers: :first_row) do |row|
+  # puts "#{row[0]}, #{row[1]}, #{row[2]}"
+  name = row[0]
+  manufacturer = row[1]
+  Medicine.create(name: name, manufacturer: manufacturer)
+end
+
+puts "Medicines created!"
+
+puts "Seeding serializations next..."
+# Seeding serialization
+CSV.foreach(filepath_serial, headers: :first_row) do |row|
   # puts "#{row[0]}, #{row[1]}, #{row[2]}"
   name = row[0]
   batch = row[1]
   exp_date = row[2]
   mfg_date = row[3]
-  manufacturer = row[4]
-  serial_num = row[5]
-  Medicine.create(name: name, batch: batch, exp_date: exp_date, mfg_date: mfg_date, manufacturer: manufacturer, serial_num: serial_num)
+  serial_num = row[4]
+  serial = Serialization.create(batch: batch, exp_date: exp_date, mfg_date: mfg_date, serial_num: serial_num, medicine_id: Medicine.where(name: "#{name}")[0].id)
 end
+
+puts "Seeding pictures next..."
 
 # Seeding pictures based on medicine name
 Medicine.where(name: "Leftose").each do |medicine|
