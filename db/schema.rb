@@ -75,8 +75,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_17_015727) do
     t.boolean "online", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "country"
     t.bigint "medicine_id"
+    t.string "country"
     t.index ["medicine_id"], name: "index_reports_on_medicine_id"
     t.index ["user_id"], name: "index_reports_on_user_id"
   end
