@@ -3,13 +3,11 @@
     <h1>Worry less.</h1>
     <h1>Live healthier.</h1>
     <p>Welcome to MedSafe</p>
-    <div data-controller="scanning">
-      <div id="scandit-barcode-picker" data-scandit-id="<%= ENV["SCANDIT"] %>" class="scanner"></div>
-      <div class="searchbar bar-container">
+      <div class="searchbar bar-container bar-scan">
         <div class="search">
-          <button id="start-scanner-button">
-            <i class="fa-solid fa-qrcode fa-xl"></i>
-          </button>
+        <button>
+          <%= link_to ('<i class="fa-solid fa-qrcode fa-xl"></i>').html_safe, scanning_path %>
+        </button>
 
           <%= form_for :medicine, url: medicine_path do |f| %>
             <%= f.text_field :data,
@@ -18,9 +16,7 @@
             <%= f.submit "Search" %>
           <% end %>
         </div>
-        <div id="scandit-barcode-result" class="result-text"></div>
       </div>
-    </div>
   </div>
 </div>
 <% if !current_user.nil? %>

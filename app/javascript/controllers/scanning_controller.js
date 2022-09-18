@@ -11,11 +11,12 @@ export default class extends Controller {
     var barcodeResultElement = document.getElementById(
       "scandit-barcode-result"
     );
-    var starterButton = document.getElementById("start-scanner-button");
+    // var starterButton = document.getElementById("start-scanner-button");
     // console.log(scanditBarcodePicker);
     var licenseKey = scanditBarcodePicker.dataset.scanditId;
 
-    starterButton.addEventListener("click", startBarcodePicker);
+    startBarcodePicker;
+    // starterButton.addEventListener("click", startBarcodePicker);
     ScanditSDK.configure(`${licenseKey}`, {
       engineLocation: "https://cdn.jsdelivr.net/npm/scandit-sdk@5.x/build/",
     })
@@ -23,8 +24,8 @@ export default class extends Controller {
         return ScanditSDK.BarcodePicker.create(
           document.getElementById("scandit-barcode-picker"),
           {
-            accessCamera: false,
-            visible: false,
+            accessCamera: true,
+            visible: true,
             playSoundOnScan: true,
             vibrateOnScan: true,
             scanSettings: new ScanditSDK.ScanSettings({
@@ -86,7 +87,7 @@ export default class extends Controller {
             })
             .on("ready", () => {
               barcodeResultElement.innerHTML = `<i class="fa-solid fa-circle-check fa-xs"></i> The BarcodePicker is ready!`;
-              starterButton.style.display = "inline-block";
+              // starterButton.style.display = "inline-block";
             });
         });
       })
@@ -96,7 +97,7 @@ export default class extends Controller {
       });
 
     function startBarcodePicker() {
-      starterButton.style.display = "none";
+      // starterButton.style.display = "none";
       barcodeResultElement.innerHTML =
         "The BarcodePicker is accessing the camera...";
       scanditBarcodePicker.accessCamera().then(() => {
