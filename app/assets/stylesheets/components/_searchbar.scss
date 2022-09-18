@@ -14,13 +14,16 @@
     border-radius: 5px;
     height: 38px;
     margin: 2px 0;
+    background-color: white;
 
-    #start-scanner-button {
+    button {
       border: none;
       background-color: transparent;
-      color: rgba(187, 187, 187, 0.7);
-      &:hover {
-        color: rgba(187, 187, 187, 1);
+        .fa-qrcode {
+        color: rgba(187, 187, 187, 0.7);
+        &:hover {
+          color: rgba(187, 187, 187, 1);
+        }
       }
     }
 
@@ -85,7 +88,11 @@
       }
   }
 
+}
 
+.result-text {
+  font-weight: bold;
+  text-align: center;
 }
 
 .bar-container {
@@ -93,11 +100,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+}
+
+
+.bar-search {
   padding: 0 40px;
   margin-bottom: 20px;
-  .result-text {
-    font-weight: bold;
-    text-align: left;
-    white-space: nowrap;
-  }
+
 }
