@@ -5,7 +5,6 @@ class ReportsController < ApplicationController
   def index
     @reports = Report.order(created_at: :desc)
     @reports = Report.global_search(params[:query]) if params[:query].present?
-    @report = Report.new
     respond_to do |format|
       format.html # Follow regular flow of Rails
       format.text { render partial: "reports/list", locals: {reports: @reports}, formats: [:html] }
@@ -16,7 +15,7 @@ class ReportsController < ApplicationController
   end
 
   def new
-
+    @report = Report.new
   end
 
   def create
