@@ -80,6 +80,8 @@ export default class extends Controller {
                 if (response.redirected) {
                   window.location.href = response.url;
                 }
+                scanditBarcodePicker.setVisible(false);
+                scanditBarcodePicker.setaccessCamera(false);
               });
             })
             .on("scanError", (error) => {
