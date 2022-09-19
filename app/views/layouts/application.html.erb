@@ -11,7 +11,9 @@
 
   <body>
   <div class="overall-container">
-    <%= render "shared/navbar" %>
+    <% if request.path == reports_path || request.path == reminders_path %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= render "shared/flashes" %>
     <%= render "shared/btmbar" %>
 
