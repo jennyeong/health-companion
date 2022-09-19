@@ -1,1 +1,20 @@
-<h1>Counterfeit page</h1>
+<div class="container counterfeit">
+  <div class="counterfeit-image">
+    <%= image_tag("Not-Recognized.png") %>
+  </div>
+  <div class="counterfeit-description">
+    <p class="description1">Your product is</p>
+    <p class="description2">Not Recognized</span> by MedSafe</p>
+  </div>
+</div>
+
+<div class="container report-counterfeit">
+  <div class="report-image">
+    <%= image_tag("Report.png") %>
+    <div class="report-info">
+    <%= link_to new_report_path do %>
+      <button type="button" class="btn btn-primary">Please fill in the form to help us verify your product.</button>
+    <% end %>
+  </div>
+  </div>
+</div>
