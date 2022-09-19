@@ -2,10 +2,27 @@
   width: 40px;
   border-radius: 50%;
 }
-.avatar-large {
-  width: 56px;
-  border-radius: 50%;
+
+.title {
+  background-color: #F3EDF7;
+  display: flex;
+  align-items: center;
+  padding: 16px 8px;
+  h5 {
+    margin-bottom: 0;
+    padding: 0 5px;
+    font-weight: bold;
+  }
+  .avatar-large {
+    img {
+      border-radius: 50%;
+    }
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
 }
+
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
