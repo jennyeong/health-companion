@@ -2,10 +2,12 @@
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-    <br>
+    <h4>Report unauthorised medicine</h4>
     <div class="form-inputs" data-controller="online">
       <%= f.input :online,
                   as: :boolean,
+                  wrapper_html: { class: 'checkbox'},
+                  label_html: { class: 'check-label' },
                   input_html: {data: { online_target: "boolean",
                               action: "click->online#update"}}
                   %>

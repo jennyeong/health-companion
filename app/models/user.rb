@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :reports
   has_many :reminders, dependent: :destroy
 
-  validates :first_name, :last_name, :username, :contact, :email, :password, presence: true
+  validates :first_name, :last_name, :contact, :email, :password, presence: true
 end

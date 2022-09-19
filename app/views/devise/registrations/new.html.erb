@@ -1,34 +1,24 @@
 <div class="formated-form">
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
     <%= f.error_notification %>
-
+      <h2>Create new account!</h2>
       <%= f.input :first_name,
                   required: false,
-                  autofocus: true,
-                  wrapper_html: { class: 'p'}%>
+                  autofocus: true %>
       <%= f.input :last_name,
                   required: false,
-                  autofocus: true,
-                  wrapper_html: { class: 'p'}%>
-      <%= f.input :username,
-                  required: false,
-                  autofocus: true,
-                  wrapper_html: { class: 'p'}%>
+                  autofocus: true %>
       <%= f.input :contact,
                   required: false,
-                  autofocus: true,
-                  wrapper_html: { class: 'p'}%>
+                  autofocus: true %>
       <%= f.input :email,
                   required: false,
-                  autofocus: true,
-                  wrapper_html: { class: 'p'}%>
+                  autofocus: true %>
       <%= f.input :password,
                   required: false,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  wrapper_html: { class: 'p'}%>
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
       <%= f.input :password_confirmation,
-                  required: false,
-                  wrapper_html: { class: 'p'}%>
+                  required: false %>
 
       <%= f.button :submit, "Sign up" %>
       <br>
