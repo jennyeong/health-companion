@@ -10,11 +10,13 @@
 
 <div class="container report-counterfeit">
   <div class="report-image">
+    <p class="report-instructions">WHAT TO DO NEXT?</p>
     <%= image_tag("Report.png") %>
-    <div class="report-info">
     <%= link_to new_report_path do %>
-      <button type="button" class="btn btn-primary">Please fill in the form to help us verify your product.</button>
+      <button type="button" class="btn btn-primary report-form-btn">Please fill in the form to help us verify your product.</button>
     <% end %>
-  </div>
+    <%# <%= link_to pharmacies_path do %>
+      <button type="button" class="btn btn-primary pharmacies-btn">Grab an authentic product from pharmacies near you.</button>
+    <%# <% end %>
   </div>
 </div>
