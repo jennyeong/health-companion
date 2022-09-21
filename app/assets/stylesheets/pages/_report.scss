@@ -14,7 +14,7 @@
     max-width: 380px;
     box-shadow: 0 0 1em #222;
     border-radius: 2px;
-    padding: 1px;
+    padding: 2px;
     // Box shadow helper
     @mixin BoxShadowHelper($level: 1){
       @if $level == 1 {
@@ -26,6 +26,8 @@
     }
     a {transition: .25s all;}
     .card {
+      padding: 0;
+      margin: 0;
       overflow: hidden;
       @include BoxShadowHelper(1);
       transition: .25s box-shadow;
