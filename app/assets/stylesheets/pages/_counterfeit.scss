@@ -1,0 +1,38 @@
+.counterfeit-image {
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 0;
+  }
+}
+
+.counterfeit-description {
+  text-align: center;
+
+  .description1 {
+    margin: 0;
+  }
+
+  .description2 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #553a9b;
+    margin: 0;
+  }
+}
+
+.counterfeit {
+  margin-bottom: 0.2rem;
+}
+
+.report-image {
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.report-info {
+  position: relative;
+  bottom: 102px;
+}
