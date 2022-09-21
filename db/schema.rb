@@ -49,15 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_070055) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pg_search_documents", force: :cascade do |t|
-    t.text "content"
-    t.string "searchable_type"
-    t.bigint "searchable_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable"
-  end
-
   create_table "reminders", force: :cascade do |t|
     t.integer "interval"
     t.date "start_date"
