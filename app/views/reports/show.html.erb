@@ -1,3 +1,5 @@
+<%= render "shared/navbar" %>
+
 <div class="report">
   <div class="report-container">
     <article class="card animated fadeInLeft">
@@ -15,7 +17,7 @@
               <div class="carousel-inner" role="listbox">
                 <% @report.photos.each_with_index do |image, index| %>
                   <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
-                    <%= cl_image_tag image.key, :transformation => {:width => 360, :height => 240, :crop => "lfill"} %>
+                    <%= cl_image_tag image.key, :transformation => {:width => 375, :height => 250, :crop => "lfill"} %>
                   </div>
                 <% end %>
                 <%# <div class="carousel-item active">
@@ -41,7 +43,11 @@
           </div>
           <div class="card-block">
             <h4 class="card-title"><%= @report.shop_name %></h4>
-            <p class="text-muted"><%= @report.shop_url %></p>
+            <% if @report.online %>
+              <p class="text-muted"><%= @report.shop_url %></p>
+            <% else %>
+              <p class="text-muted"><%= @report.shop_location %> <%= @report.country %></p>
+            <% end %>
             <p class="card-text">
             <strong>Effects: </strong><%= @report.effects %>
             </p>
