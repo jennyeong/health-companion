@@ -1,66 +1,120 @@
+// .counterfeit-image {
+//   overflow: hidden;
+//   height: 15rem;
+//   max-width: 100%;
+
+//   img {
+//     height: 20rem;
+//     vertical-align: middle;
+//     margin: -61px 0 0 -10px;
+//   }
+// }
+
+// .counterfeit-description {
+//   text-align: center;
+//   position: relative;
+//   top: -22px;
+
+//   .description1 {
+//     margin: 0;
+//   }
+
+//   .description2 {
+//     font-size: 1.2rem;
+//     font-weight: bolder;
+//     color: #d04242;
+//     margin: 0;
+//   }
+// }
+
+// .counterfeit {
+//   border: #be7676 solid 22px;
+// }
+
+// .report-image {
+//   height: 1rem;
+
+//   img {
+//     max-width: 100%;
+//     vertical-align: middle;
+//   }
+
+//   .report-form-btn {
+//     position: relative;
+//     bottom: 102px;
+//   }
+
+//   .pharmacies-btn {
+//     position: relative;
+//     bottom: 100px;
+//   }
+// }
+
+// .report-instructions {
+//   font-size: 1.2rem;
+//   text-align: center;
+//   margin-bottom: 0;
+//   position: relative;
+//   top: 53px;
+//   font-weight: bolder;
+//   color: #6750a4;
+// }
+
+// .report-counterfeit {
+//   position: relative;
+//   top: -30px;
+// }
+
 .counterfeit-image {
   overflow: hidden;
-  height: 15rem;
-  max-width: 100%;
-
-  img {
-    height: 20rem;
-    vertical-align: middle;
-    margin: -61px 0 0 -10px;
-  }
-}
-
-.counterfeit-description {
-  text-align: center;
-  position: relative;
-  top: -22px;
-
-  .description1 {
-    margin: 0;
-  }
-
-  .description2 {
-    font-size: 1.2rem;
-    font-weight: bolder;
-    color: #d04242;
-    margin: 0;
-  }
-}
-
-.counterfeit {
-  border: #d04242 solid 22px;
-}
-
-.report-image {
-  height: 1rem;
 
   img {
     max-width: 100%;
-    vertical-align: middle;
+    position: relative;
+    top: 4rem;
   }
+}
+
+.not-recognized {
+  position: relative;
+  top: -4rem;
+  text-align: center;
+  img {
+    max-width: 20%;
+  }
+  p {
+    margin: 0;
+  }
+  .not-recognized-word {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #AE4040;
+  }
+}
+
+.get-verified {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2rem;
 
   .report-form-btn {
-    position: relative;
-    bottom: 102px;
+    padding: 10px 105px;
   }
+}
+
+.pharmacy-nearby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2rem;
+  margin-top: 0.5rem;
 
   .pharmacies-btn {
-    position: relative;
-    bottom: 100px;
+    padding: 10px 70px;
+    background-color: #bdb2d6;
+    border-color: #bdb2d6;
   }
-}
-
-.report-instructions {
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 0;
-  position: relative;
-  top: 53px;
-  font-weight: bolder;
-  color: #6750a4;
-}
-
-.report-counterfeit {
-  position: relative;
-  top: -30px;
 }
