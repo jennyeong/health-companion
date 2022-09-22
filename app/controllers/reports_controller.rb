@@ -12,6 +12,10 @@ class ReportsController < ApplicationController
   end
 
   def show
+    @marker = {
+      lat: @report.latitude,
+      lng: @report.longitude
+    }
   end
 
   def new
