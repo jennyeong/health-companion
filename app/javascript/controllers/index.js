@@ -16,6 +16,9 @@ application.register("nav-more", NavMoreController)
 import OnlineController from "./online_controller"
 application.register("online", OnlineController)
 
+import ReportMapController from "./report_map_controller"
+application.register("report-map", ReportMapController)
+
 import ScanningController from "./scanning_controller"
 application.register("scanning", ScanningController)
 

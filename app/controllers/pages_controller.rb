@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :scanning, :successful, :counterfeit, :information ]
+  skip_before_action :authenticate_user!, only: [ :home, :scanning, :successful, :counterfeit, :information, :pharmacies ]
 
   def home
     @reports = Report.order(created_at: :desc).limit(5)
