@@ -1,22 +1,48 @@
-<div class="container counterfeit">
+<%# <div class="container counterfeit">
   <div class="counterfeit-image">
     <%= image_tag("Not-Recognized.png") %>
-  </div>
-  <div class="counterfeit-description">
-    <p class="description1">Your product is</p>
-    <p class="description2">Not Recognized</span> by MedSafe</p>
-  </div>
-</div>
+  <%# </div> %>
+  <%# <div class="counterfeit-description"> %>
+    <%# <p class="description1">Your product is</p> %>
+    <%# <p class="description2">Not Recognized by MedSafe</p> %>
+  <%# </div> %>
+<%# </div> %>
 
-<div class="container report-counterfeit">
-  <div class="report-image">
-    <p class="report-instructions">WHAT TO DO NEXT?</p>
-    <%= image_tag("Report.png") %>
-    <%= link_to new_report_path do %>
-      <button type="button" class="btn btn-primary report-form-btn">Please fill in the form to help us verify your product.</button>
-    <% end %>
-    <%# <%= link_to pharmacies_path do %>
-      <button type="button" class="btn btn-primary pharmacies-btn">Grab an authentic product from pharmacies near you.</button>
+<%# <div class="container report-counterfeit"> %>
+  <%# <div class="report-image"> %>
+    <%# <p class="report-instructions">WHAT TO DO NEXT?</p> %>
+    <%# <%= image_tag("Report.png") %>
+    <%# <%= link_to new_report_path do %>
+      <%# <button type="button" class="btn btn-primary report-form-btn">Please fill in the form to help us verify your product.</button> %>
     <%# <% end %>
+    <%# <%= link_to pharmacies_path do %>
+      <%# <button type="button" class="btn btn-primary pharmacies-btn">Grab an authentic product from pharmacies near you.</button> %>
+    <%# <% end %>
+  <%# </div> %>
+<%# </div> %>
+
+<div class="container counterfeit">
+  <div class="counterfeit-image">
+    <%= image_tag("Report.png") %>
+  </div>
+
+  <div class="not-recognized">
+    <%= image_tag("Not-Recognized.png") %>
+    <p>Your product is</p>
+    <p class="not-recognized-word">Not Recognized by MedSafe</p>
+  </div>
+
+  <br>
+  <br>
+  <div class="get-verified">
+    <%= link_to new_report_path do %>
+      <button type="button" class="btn btn-primary report-form-btn">CONTACT US</button>
+    <% end %>
+  </div>
+
+  <div class="pharmacy-nearby">
+    <%# <%= link_to pharmacies_path do %>
+        <button type="button" class="btn btn-primary pharmacies-btn">NEARBY PHARMACIES</button>
+      <%# <% end %>
   </div>
 </div>
