@@ -56,16 +56,21 @@
             </p>
             <%# <a href="#" class="btn btn-primary">Read more</a> %>
           </div>
-          <div style="width: 100%; height: 300px;"
-               data-controller="report-map"
-               data-report-map-marker-value="<%= @marker.to_json %>"
-               data-report-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-          </div>
+          <% if !@report.online %>
+            <div style="width: 100%; height: 300px;"
+                data-controller="report-map"
+                data-report-map-marker-value="<%= @marker.to_json %>"
+                data-report-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+          <% end %>
           <div class="title">
-              <div class="avatar-large">
-                <%= image_tag @report.medicine.photo, width: "40", heigh: "40" %>
+              <div class="title-left">
+                <div class="avatar-large">
+                  <%= image_tag @report.medicine.photo, width: "40", heigh: "40" %>
+                </div>
+                <p><%= @report.medicine.name %></p>
               </div>
-              <p><%= @report.medicine.name %><p>
+              <p><%= @report.created_at.strftime("%d %b %Y") %></p>
             </div>
     </article>
   </div>

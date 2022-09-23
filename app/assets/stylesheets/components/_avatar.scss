@@ -9,18 +9,25 @@
   display: flex;
   align-items: center;
   padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   p {
     margin-bottom: 0;
     padding: 0 5px;
     font-weight: bold;
   }
-  .avatar-large {
-    img {
+  .title-left {
+    display: flex;
+    align-items: center;
+    .avatar-large {
+      img {
+        border-radius: 50%;
+      }
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
     }
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
   }
 }
 
