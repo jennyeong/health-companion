@@ -28,8 +28,11 @@ a.no-link-decoration {
   padding-left:10px;
 }
 .border-color{
-  border-color:#6f42c1; 
+  border-color:#6f42c1;
 }
-.time-container.hide {
+.time-container.hide, .show-next-time-btn.hide {
   display: none;
+}
+.no-reminder-msg {
+  padding: 0.2rem 1.2rem;
 }
