@@ -10,7 +10,7 @@ class MedicinesController < ApplicationController
     @barcode = barcode_params
     # binding.pry
     # puts @barcode
-    if @barcode[:symbology] == "data-matrix"
+    if (@barcode[:symbology] == "data-matrix") || (@barcode[:data].length == 12)
       if Serialization.where(serial_num: "#{@barcode[:data]}").exists?
         @serial_num = Serialization.find_by(serial_num: "#{@barcode[:data]}")
         @medicine = Medicine.find(@serial_num.medicine_id)
