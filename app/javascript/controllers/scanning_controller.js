@@ -44,7 +44,7 @@ export default class extends Controller {
             }),
           }
         ).then((barcodePicker) => {
-          barcodeResultElement.innerHTML = "The BarcodePicker is loading...";
+          // barcodeResultElement.innerHTML = "The BarcodePicker is loading...";
           scanditBarcodePicker = barcodePicker;
           barcodePicker
             .on("scan", (scanResult) => {
@@ -86,11 +86,11 @@ export default class extends Controller {
             })
             .on("scanError", (error) => {
               console.error(error);
-            })
-            .on("ready", () => {
-              barcodeResultElement.innerHTML = `<i class="fa-solid fa-circle-check fa-xs"></i> The BarcodePicker is ready!`;
-              // starterButton.style.display = "inline-block";
             });
+          // .on("ready", () => {
+          //   barcodeResultElement.innerHTML = `<i class="fa-solid fa-circle-check fa-xs"></i> The BarcodePicker is ready!`;
+          //   // starterButton.style.display = "inline-block";
+          // });
         });
       })
       .catch((error) => {
@@ -100,10 +100,10 @@ export default class extends Controller {
 
     function startBarcodePicker() {
       // starterButton.style.display = "none";
-      barcodeResultElement.innerHTML =
-        "The BarcodePicker is accessing the camera...";
+      // barcodeResultElement.innerHTML =
+      //   "The BarcodePicker is accessing the camera...";
       scanditBarcodePicker.accessCamera().then(() => {
-        barcodeResultElement.innerHTML = "";
+        // barcodeResultElement.innerHTML = "";
         scanditBarcodePicker.setVisible(true);
       });
     }
