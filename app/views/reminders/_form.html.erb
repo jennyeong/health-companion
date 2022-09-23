@@ -1,8 +1,8 @@
 <%= simple_form_for(@reminder) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <h4 >Add reminder!</h4>
-  <div class="form-inputs" data-controller="online">
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<h4 >Add reminder!</h4>
+<div class="form-inputs" data-controller="online">
   <div class="form-inputs">
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.association :medicine %>
@@ -14,23 +14,40 @@
     <br>
     <%= f.input :dosage  %>
     <%= f.input :description %>
-  <!--   <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>  
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>  
-    <%= f.input :time_1 , { :id => 'timepicker' } %>
-     <script type = "text/javascript">  
-          $(function () {  
-              $('#timepicker').datetimepicker({  
-                  format: 'LT'  
-              });  
-          }); 
-     </script>   -->
-    <%= f.input :time_2 %>
-    <%= f.input :time_3 %>
-    <%= f.input :time_4 %>
-  </div>
-  </div>
-    <div class="form-actions">
+
+ <!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"> </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
+        rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js">
+        </script>
+    <%#= f.input :time_1 , :id => "datetime" %>
+     <script>
+        $('#datetime').datetimepicker({
+            format: 'hh:mm:ss a'
+        });
+      </script> -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+      <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+      <%= f.input :time_1 , id: 'timepicker' %>
+      <script> type="text/javascript"></script> $('#datetime').datetimepicker({
+      format: 'hh:mm:ss a'
+      });</script>
+
+      <%= f.input :time_2 %>
+      <%= f.input :time_3 %>
+      <%= f.input :time_4 %>
+    </div>
+   </div>
+  <div class="form-actions">
     <%= f.button :submit %>
   </div>
   <% end %>

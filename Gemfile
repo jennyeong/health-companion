@@ -35,7 +35,7 @@ gem "pry-byebug"
 gem "pg_search"
 
 gem "faker"
-
+gem 'bootstrap-timepicker-rails', '~> 0.1.3'
 gem 'bootstrap-datepicker-rails'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
