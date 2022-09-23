@@ -11,7 +11,7 @@
 
   <body>
   <div class="overall-container">
-    <% if request.path == reports_path || request.path == reminders_path %>
+    <% if request.path == reports_path || request.path == reminders_path || params[:controller].include?("reminder") %>
       <%= render "shared/navbar" %>
     <% end %>
     <%= render "shared/flashes" %>
