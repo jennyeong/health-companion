@@ -44,34 +44,34 @@ end
 puts "Seeding pictures next..."
 
 # Seeding pictures based on medicine name
-# Medicine.where(name: "Leftose").each do |medicine|
-#   medicine.photo.attach(io: File.open('app/assets/images/Medicine/Leftose.png'), filename: 'Leftose.png')
-#   medicine.save!
-# end
+Medicine.where(name: "Leftose").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Leftose.png'), filename: 'Leftose.png')
+  medicine.save!
+end
 
-# Medicine.where(name: "Zyrtec").each do |medicine|
-#   medicine.photo.attach(io: File.open('app/assets/images/Medicine/Zyrtec.png'), filename: 'Zyrtec.png')
-#   medicine.save!
-# end
+Medicine.where(name: "Zyrtec").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Zyrtec.png'), filename: 'Zyrtec.png')
+  medicine.save!
+end
 
-# Medicine.where(name: "Human Papillomavirus (HPV) Vaccine").each do |medicine|
-#   medicine.photo.attach(io: File.open('app/assets/images/Medicine/HPV.png'), filename: 'HPV.png')
-#   medicine.save!
-# end
+Medicine.where(name: "Human Papillomavirus (HPV) Vaccine").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/HPV.png'), filename: 'HPV.png')
+  medicine.save!
+end
 
 puts "Seeding Users next..."
 
 # Seeding Users
-# 10.times do
-#   user = User.new(
-#     first_name: Faker::Name.first_name,
-#     last_name: Faker::Name.last_name,
-#     contact: Faker::PhoneNumber.phone_number,
-#     email: Faker::Internet.email,
-#     password: "123456"
-#   )
-#   user.save!
-# end
+10.times do
+  user = User.new(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    contact: Faker::PhoneNumber.phone_number,
+    email: Faker::Internet.email,
+    password: "123456"
+  )
+  user.save!
+end
 
 puts "Seeding reports next..."
 
