@@ -53,7 +53,7 @@ class RemindersController < ApplicationController
     @reminder.destroy
 
     respond_to do |format|
-      format.html { redirect_to reminders_url, notice: "Reminder was successfully deleted." }
+      format.html { redirect_to reminders_url, status: :see_other notice: "Reminder was successfully deleted." }
       format.json { head :no_content }
     end
   end

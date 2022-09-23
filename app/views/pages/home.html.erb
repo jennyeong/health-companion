@@ -23,7 +23,7 @@
   <div class="list-container">
     <div class="list-title">
       <p><strong>Reminder</strong></p>
-      <%= link_to new_reminder_path do %>
+      <%= link_to new_reminder_path, data: {turbo: :false} do %>
         <i class="fa-solid fa-plus"></i>
       <% end %>
     </div>
