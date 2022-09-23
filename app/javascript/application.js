@@ -11,4 +11,4 @@ function init() {
     }
   })
 }
-$(document).on('ready turbo:load', init());
+$(document).on('ready turbo:visit', init());
