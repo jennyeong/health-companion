@@ -62,16 +62,16 @@ puts "Seeding pictures next..."
 puts "Seeding Users next..."
 
 # Seeding Users
-# 10.times do
-#   user = User.new(
-#     first_name: Faker::Name.first_name,
-#     last_name: Faker::Name.last_name,
-#     contact: Faker::PhoneNumber.phone_number,
-#     email: Faker::Internet.email,
-#     password: "123456"
-#   )
-#   user.save!
-# end
+10.times do
+  user = User.new(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    contact: Faker::PhoneNumber.phone_number,
+    email: Faker::Internet.email,
+    password: "123456"
+  )
+  user.save!
+end
 
 puts "Seeding reports next..."
 
