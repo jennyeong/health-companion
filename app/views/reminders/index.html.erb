@@ -5,10 +5,10 @@
 </div>
 
 <div class="list-container">
-  <%# @reminders.sort_by_latest.sort{|s| s.next_due_timestamp}.reverse.each do |reminder| %>
-    <%# <%= render partial: "shared/card-list-reminder", locals: {reminder: reminder} %>
+  <% @reminders.order(updated_at: :desc).each do |reminder| %>
+    <%= render partial: "shared/card-list-reminder", locals: {reminder: reminder} %>
     <br/>
-  <%# end %>
+  <% end %>
 </div>
 
 <!-- Modal -->

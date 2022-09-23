@@ -28,8 +28,8 @@
       <% end %>
     </div>
 
-    <% if Reminder.sort_by_latest.exists? %>
-      <%= render partial: "shared/card-list-reminder", locals: {reminder: Reminder.where(user: current_user).last} %>
+    <% if Reminder.active_reminders_for(current_user.id).present? %>
+      <%= render partial: "shared/card-list-reminder", locals: {reminder: Reminder.active_reminders_for(current_user.id).first} %>
     <% end %>
   </div>
 <% end %>
