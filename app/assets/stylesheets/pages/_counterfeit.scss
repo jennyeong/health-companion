@@ -1,38 +1,120 @@
+// .counterfeit-image {
+//   overflow: hidden;
+//   height: 15rem;
+//   max-width: 100%;
+
+//   img {
+//     height: 20rem;
+//     vertical-align: middle;
+//     margin: -61px 0 0 -10px;
+//   }
+// }
+
+// .counterfeit-description {
+//   text-align: center;
+//   position: relative;
+//   top: -22px;
+
+//   .description1 {
+//     margin: 0;
+//   }
+
+//   .description2 {
+//     font-size: 1.2rem;
+//     font-weight: bolder;
+//     color: #d04242;
+//     margin: 0;
+//   }
+// }
+
+// .counterfeit {
+//   border: #be7676 solid 22px;
+// }
+
+// .report-image {
+//   height: 1rem;
+
+//   img {
+//     max-width: 100%;
+//     vertical-align: middle;
+//   }
+
+//   .report-form-btn {
+//     position: relative;
+//     bottom: 102px;
+//   }
+
+//   .pharmacies-btn {
+//     position: relative;
+//     bottom: 100px;
+//   }
+// }
+
+// .report-instructions {
+//   font-size: 1.2rem;
+//   text-align: center;
+//   margin-bottom: 0;
+//   position: relative;
+//   top: 53px;
+//   font-weight: bolder;
+//   color: #6750a4;
+// }
+
+// .report-counterfeit {
+//   position: relative;
+//   top: -30px;
+// }
+
 .counterfeit-image {
+  overflow: hidden;
+
   img {
     max-width: 100%;
-    vertical-align: middle;
-    margin: 0;
+    position: relative;
+    top: 4rem;
   }
 }
 
-.counterfeit-description {
+.not-recognized {
+  position: relative;
+  top: -4rem;
   text-align: center;
-
-  .description1 {
+  img {
+    max-width: 20%;
+  }
+  p {
     margin: 0;
   }
-
-  .description2 {
+  .not-recognized-word {
     font-size: 1.2rem;
     font-weight: bolder;
-    color: #553a9b;
-    margin: 0;
+    color: #AE4040;
   }
 }
 
-.counterfeit {
-  margin-bottom: 0.2rem;
-}
-
-.report-image {
-  img {
-    max-width: 100%;
-    vertical-align: middle;
-  }
-}
-
-.report-info {
+.get-verified {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  bottom: 102px;
+  top: -2rem;
+
+  .report-form-btn {
+    padding: 10px 105px;
+  }
+}
+
+.pharmacy-nearby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2rem;
+  margin-top: 0.5rem;
+
+  .pharmacies-btn {
+    padding: 10px 70px;
+    background-color: #bdb2d6;
+    border-color: #bdb2d6;
+  }
 }

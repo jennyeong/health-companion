@@ -1,183 +1,411 @@
+// .results {
+//   margin-top: 1rem;
+// }
+
+// .results-pic {
+//   img {
+//     width: auto;
+//     max-height: 23rem;
+//     margin-top: -72px;
+//     margin-bottom: -73px;
+//     margin-left: -5px;
+//   }
+//   border: 1px solid #968bb3;
+//   border-radius: 25px;
+//   border-width: 4px;
+//   overflow: hidden;
+// }
+
+// .pharma-info {
+//   .name {
+//     font-size: 1.2rem;
+//     font-weight: bold;
+//     color: #553a9b;
+//     margin-bottom: 0;
+//   }
+//   .manufacturer {
+//     font-size: 1rem;
+//     font-weight: light;
+//     color: #2a1c2e;
+//     margin: 0px;
+//   }
+//   background-color: #b2a5d6;
+//   border-radius: 15px;
+//   padding: 0.5rem;
+//   margin-bottom: 0.5rem;
+//   text-align: center;
+// }
+
+
+
+
+
+// .authorized {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1rem;
+//   i {
+//     align-self: center;
+//     font-size: 2rem;
+//     color: rgb(57, 185, 57);
+//   }
+//   p {
+//     margin-bottom: 0;
+//     font-weight: bold;
+//     padding: 0.5rem;
+//   }
+// }
+
+// .med-reminder {
+//   font-size: 1.2rem;
+//   text-decoration: none;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: auto;
+//   margin-bottom: 0.5rem;
+
+//   .med-reminder-left {
+//     padding: 1.42rem;
+//     border: 1px solid #968bb3;
+//     border-radius: 50px 0 0 50px;
+//     background-color: #968bb3;
+//     width: 9rem;
+//     text-align: center;
+//   }
+//   .med-reminder-right {
+//     background-color: white;
+//     padding: 1rem;
+//     border: 1px solid #968bb3;
+//     border-radius: 0 50px 50px 0;
+//     text-align: center;
+//     width: 11rem;
+//     font-size: small;
+//   }
+
+// }
+// Starts from here for new css
+// .results {
+//   border: #8dbe76 solid 22px;
+// }
+
+// .results-pic {
+//   border:#000000 solid 2px;
+//   border-radius: 15rem;
+// }
+
+// .results-image {
+//   overflow: hidden;
+//   height: 15rem;
+//   max-width: 100%;
+
+//   img {
+//     max-height: 350px;
+//     max-width: 350px;
+//     vertical-align: middle;
+//     margin: -63px 0 0 -12px;
+//   }
+// }
+
+// .results-description {
+//   text-align: center;
+//   position: relative;
+//   top: -22px;
+
+//   .results-description1 {
+//     margin: 0;
+//   }
+
+//   .results-description2 {
+//     font-size: 1rem;
+//     font-weight: bolder;
+//     color: #489724;
+//     margin: 0;
+//   }
+// }
+
+// .pharma-name {
+//   text-align: center;
+//   color: #6750a4;
+//   font-size: 1.2rem;
+//   font-weight: bolder;
+//   margin-top: 1rem;
+// }
+
+// .batch-info {
+//   i {
+//     align-self: center;
+//     font-size: 2rem;
+//     width: 50%;
+//   }
+//   p {
+//     margin-bottom: 0;
+//     font-weight: bold;
+//   }
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   margin-bottom: 1rem;
+//   .batch-left {
+//     padding: 1.42rem;
+//     border: 1px solid #968bb3;
+//     border-radius: 50px 0 0 50px;
+//     background-color: #968bb3;
+//     text-align: center;
+//     width: 11rem;
+//   }
+
+//   .batch-right {
+//     background-color: white;
+//     padding: 1rem;
+//     border: 1px solid #968bb3;
+//     border-radius: 0 50px 50px 0;
+//     text-align: center;
+//     width: 11rem;
+//   }
+// }
+
+// .mfg-date {
+//   i {
+//     align-self: center;
+//     font-size: 2rem;
+//     width: 50%;
+//   }
+//   p {
+//     margin-bottom: 0;
+//     font-weight: bold;
+//   }
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   margin: auto;
+//   margin-bottom: 1rem;
+
+//   .mfg-left {
+//     padding: 1.42rem;
+//     border: 1px solid #968bb3;
+//     border-radius: 50px 0 0 50px;
+//     background-color: #968bb3;
+//     // background-color: white;
+//     width: 11rem;
+//     text-align: center;
+//   }
+//   .mfg-right {
+//     background-color: white;
+//     // background-color: #968bb3;
+//     padding: 1rem;
+//     border: 1px solid #968bb3;
+//     border-radius: 0 50px 50px 0;
+//     text-align: center;
+//   }
+// }
+
+// .exp-date {
+//   i {
+//     align-self: center;
+//     font-size: 2rem;
+//     width: 50%;
+//   }
+//   p {
+//     margin-bottom: 0;
+//     font-weight: bold;
+//   }
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   margin: auto;
+//   margin-bottom: 0.5rem;
+
+//   .exp-left {
+//     padding: 1.42rem;
+//     border: 1px solid #968bb3;
+//     border-radius: 50px 0 0 50px;
+//     background-color: #968bb3;
+//     width: 11rem;
+//     text-align: center;
+//   }
+//   .exp-right {
+//     background-color: white;
+//     padding: 1rem;
+//     border: 1px solid #968bb3;
+//     border-radius: 0 50px 50px 0;
+//     text-align: center;
+//     width: 11rem;
+//   }
+// }
+
+// .med-reminder {
+//   text-decoration: none;
+//   font-size: 1rem;
+//   font-weight: bolder;
+//   background-color: #6750a4;
+//   color: white;
+//   border-radius: 50px 50px 0 50px;
+//   position: absolute;
+//   top: 714px;
+//   right: 11px;
+//   padding: 0.8rem;
+//   &:hover {
+//     background-color: white;
+//     color: #6750a4;
+//   }
+// }
 .results {
-  margin-top: 1rem;
+  padding: 1rem;
+  margin-top: 0.2rem;
+
+  .results-name{
+    text-align: center;
+    color: #6750a4;
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
 }
 
-.results-pic {
-  img {
-    width: auto;
-    max-height: 23rem;
-    margin-top: -72px;
-    margin-bottom: -73px;
-    margin-left: -5px;
-  }
-  border: 1px solid #968bb3;
-  border-radius: 25px;
-  border-width: 4px;
+.results-image {
   overflow: hidden;
+  img {
+    max-width: 100%;
+    position: relative;
+    top: -4rem;
+  }
 }
 
-.pharma-info {
-  .name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #553a9b;
-    margin-bottom: 0;
-  }
-  .manufacturer {
-    font-size: 1rem;
-    font-weight: light;
-    color: #2a1c2e;
-    margin: 0px;
-  }
-  background-color: #b2a5d6;
-  border-radius: 15px;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
+.recognized {
+  position: relative;
+  top: -7rem;
   text-align: center;
-}
-
-.batch-info {
-  i {
-    align-self: center;
-    font-size: 2rem;
-    width: 50%;
+  img {
+    max-width: 20%;
   }
   p {
-    margin-bottom: 0;
-    font-weight: bold;
+    margin: 0;
   }
+  .recognized-word {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #489235;
+  }
+}
+
+.results-info {
+  position: relative;
+  top: -4rem;
+}
+
+.medname {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 0.5rem;
+
+  .medname-left {
+    p {
+      text-align: right;
+    }
+    color: #968bb3;
+    width: 50%;
+    margin-right: 0.6rem;
+  }
+
+  .medname-right {
+    font-weight: bolder;
+    color: #6750a4;
+    width: 50%;
+    margin-left: 0.6rem;
+  }
+}
+
+.manufacturer {
+  display: flex;
+  justify-content: center;
+
+  .manufacturer-left {
+    p {
+      text-align: right;
+    }
+    color: #968bb3;
+    width: 50%;
+    margin-right: 0.6rem;
+  }
+
+  .manufacturer-right {
+    font-weight: bolder;
+    color: #6750a4;
+    width: 50%;
+    margin-left: 0.6rem;
+  }
+}
+
+.batch {
+  display: flex;
+  justify-content: center;
+
   .batch-left {
-    padding: 1.42rem;
-    border: 1px solid #968bb3;
-    border-radius: 50px 0 0 50px;
-    background-color: #968bb3;
-    text-align: center;
-    width: 9rem;
+    p {
+      text-align: right;
+    }
+    color: #968bb3;
+    width: 50%;
+    margin-right: 0.6rem;
   }
 
   .batch-right {
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #968bb3;
-    border-radius: 0 50px 50px 0;
-    text-align: center;
-    width: 11rem;
+    font-weight: bolder;
+    color: #6750a4;
+    width: 50%;
+    margin-left: 0.6rem;
   }
 }
 
 .mfg-date {
-  i {
-    align-self: center;
-    font-size: 2rem;
-    width: 50%;
-  }
-  p {
-    margin-bottom: 0;
-    font-weight: bold;
-  }
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 0.5rem;
 
   .mfg-left {
-    padding: 1.42rem;
-    border: 1px solid #968bb3;
-    border-radius: 50px 0 0 50px;
-    background-color: #968bb3;
-    width: 9rem;
-    text-align: center;
+    p {
+      text-align: right;
+    }
+    color: #968bb3;
+    width: 50%;
+    margin-right: 0.6rem;
   }
+
   .mfg-right {
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #968bb3;
-    border-radius: 0 50px 50px 0;
-    text-align: center;
+    font-weight: bolder;
+    color: #6750a4;
+    width: 50%;
+    margin-left: 0.6rem;
   }
 }
 
 .exp-date {
-  i {
-    align-self: center;
-    font-size: 2rem;
-    width: 50%;
-  }
-  p {
-    margin-bottom: 0;
-    font-weight: bold;
-  }
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 0.5rem;
 
   .exp-left {
-    padding: 1.42rem;
-    border: 1px solid #968bb3;
-    border-radius: 50px 0 0 50px;
-    background-color: #968bb3;
-    width: 9rem;
-    text-align: center;
+    p {
+      text-align: right;
+    }
+    color: #968bb3;
+    width: 50%;
+    margin-right: 0.6rem;
   }
-  .exp-right {
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #968bb3;
-    border-radius: 0 50px 50px 0;
-    text-align: center;
-    width: 11rem;
-  }
-}
 
-.authorized {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  i {
-    align-self: center;
-    font-size: 2rem;
-    color: rgb(57, 185, 57);
-  }
-  p {
-    margin-bottom: 0;
-    font-weight: bold;
-    padding: 0.5rem;
+  .exp-right {
+    font-weight: bolder;
+    color: #6750a4;
+    width: 50%;
+    margin-left: 0.6rem;
   }
 }
 
 .med-reminder {
-  font-size: 1.2rem;
-  text-decoration: none;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-bottom: 0.5rem;
+  position: relative;
+  top: -2rem;
 
-  .med-reminder-left {
-    padding: 1.42rem;
-    border: 1px solid #968bb3;
-    border-radius: 50px 0 0 50px;
-    background-color: #968bb3;
-    width: 9rem;
-    text-align: center;
+  .med-reminder-btn {
+    padding: 10px 82px;
   }
-  .med-reminder-right {
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #968bb3;
-    border-radius: 0 50px 50px 0;
-    text-align: center;
-    width: 11rem;
-    font-size: small;
-  }
-
 }
