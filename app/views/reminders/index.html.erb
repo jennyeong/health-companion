@@ -5,7 +5,7 @@
 </div>
 
 <div class="list-container">
-  <% @reminders.sort_by_latest.map{|s| s.next_due_timestamp}.reverse.map{|s| s if s.next_due_timestamp.present?}.each do |reminder| %>
+  <% @reminders.order(updated_at: :desc).each do |reminder| %>
     <%= render partial: "shared/card-list-reminder", locals: {reminder: reminder} %>
     <br/>
   <% end %>
