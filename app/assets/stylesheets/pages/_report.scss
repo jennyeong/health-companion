@@ -16,6 +16,12 @@
     box-shadow: 0 0 1em #222;
     border-radius: 2px;
     padding: 2px;
+    .mapboxgl-ctrl-bottom-left {
+      z-index: 0 !important;
+    }
+    .mapboxgl-ctrl-bottom-right {
+      z-index: 0 !important;
+    }
     // Box shadow helper
     @mixin BoxShadowHelper($level: 1){
       @if $level == 1 {
