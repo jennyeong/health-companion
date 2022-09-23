@@ -17,7 +17,10 @@ export default class extends Controller {
   }
 
   #addMarkerToMap() {
-    new mapboxgl.Marker()
+    new mapboxgl.Marker(
+      {color: "#AE4040",
+      draggable: true}
+    )
       .setLngLat([ this.markerValue.lng, this.markerValue.lat ])
       .addTo(this.map)
   }
