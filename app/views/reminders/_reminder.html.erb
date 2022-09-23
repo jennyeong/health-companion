@@ -3,7 +3,7 @@
     <br>
     <br>
     <div>
-        <%= link_to "Edit", @reminder %> |
+        <%= link_to "Edit", edit_reminder_path(@reminder), data: { method: :get, turbo: false } %> |
         <%= link_to "Delete", @reminder, data: { "turbo-method": :delete }, style: "color: red;" %>
     </div>
     <br>

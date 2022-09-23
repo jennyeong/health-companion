@@ -22,7 +22,7 @@ class Reminder < ApplicationRecord
   end
 
   def self.active_reminders_for user_id
-    Reminder.where(user_id: user_id).sort_by_latest.sort{|s| s.next_due_timestamp}.reverse.map{|s| s if s.next_due_timestamp.present?}.compact
+    Reminder.where(user_id: user_id).map{|s| s if s.next_due_timestamp.present?}.compact.sort{|s| s.next_due_timestamp}.reverse
   end
   
 end 
