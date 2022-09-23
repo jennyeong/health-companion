@@ -1,4 +1,13 @@
+<%= provide :title, "Reminders" %>
 <div id="<%= dom_id reminder %>" class="text-center">
+    <br>
+    <br>
+    <div>
+        <%= link_to "Edit", @reminder %> |
+        <%= link_to "Delete", @reminder, data: { "turbo-method": :delete }, style: "color: red;" %>
+    </div>
+    <br>
+    <br>
     <%= image_tag "Medicine/image-7.png" %>
     <p class="reminder-heading"> Medicine name</p> 
     <p><%= reminder.medicine.name %></p>
@@ -12,22 +21,20 @@
     <button type="button" class="btn btn-primary mt-1">
         <%= reminder.time_1.strftime("%I:%M %p") %>
     </button>
-    <button type="button" class="btn btn-primary mt-1">
-        <%= reminder.time_2.strftime("%I:%M %p") %>
-    </button>
-    <button type="button" class="btn btn-primary mt-1">
-        <%= reminder.time_3.strftime("%I:%M %p") %>
-    </button>
-    <button type="button" class="btn btn-primary mt-1">
-        <%= reminder.time_4.strftime("%I:%M %p") %>
-    </button>
-    <div class="container">
-        <div class="row">
-            <div class="col-3 border border-secondary rounded-pill" style="text-color:white;">
-                <p><%= link_to "Edit", edit_reminder_path(reminder) %></p></div>
-
-            <div class="col-3 border border-secondary rounded-pill" style="text-color:white;">
-                <p><%= link_to "Delete", reminder_path(reminder), method: :delete %></p></div>             
-        </div>
+    <% if reminder.time_2.present? %>
+        <button type="button" class="btn btn-primary mt-1">
+            <%= reminder.time_2.strftime("%I:%M %p") %>
+        </button>
+    <% end %>
+    <% if reminder.time_3.present? %>
+        <button type="button" class="btn btn-primary mt-1">
+            <%= reminder.time_3.strftime("%I:%M %p") %>
+        </button>
+    <% end %>
+    <% if reminder.time_4.present? %>
+        <button type="button" class="btn btn-primary mt-1">
+            <%= reminder.time_4.strftime("%I:%M %p") %>
+        </button>
+    <% end %>
     </div>
 </div>

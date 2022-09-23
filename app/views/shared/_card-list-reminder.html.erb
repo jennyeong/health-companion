@@ -1,7 +1,11 @@
 <div class="ka reminders">
   <div class="ka-left">
     <p><small><%= reminder.next_due_timestamp&.strftime("%I:%M %p") %></small></p>
-    <h5><%= link_to "#{reminder.medicine.name} in #{distance_of_time_in_words(Time.current, reminder.next_due_timestamp)}", reminder, class: "no-link-decoration" if reminder.next_due_timestamp.present?%> </h5>
+    <% if reminder.next_due_timestamp.present? %>
+      <h5><%= link_to "#{reminder.medicine.name} in #{distance_of_time_in_words(Time.current, reminder.next_due_timestamp)}", reminder, class: "no-link-decoration" %> </h5>
+    <% else %>
+      <h5><%= link_to "#{reminder.medicine.name}", reminder, class: "no-link-decoration" %> </h5>
+    <% end %>
     <p><small><%= reminder.description %></small></p>
   </div>
 
