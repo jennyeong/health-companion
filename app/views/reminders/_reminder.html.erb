@@ -7,9 +7,18 @@
     <p class="reminder-heading"> Description </p>
     <p><%= reminder.description %></p>
     <p class="reminder-heading"> Date</p>
-    <p><%= reminder.start_date.strftime("%d %B") %> <%= reminder.start_time.strftime("%I:%M%p") %> to <%= reminder.end_date.strftime("%d %B") %> <%= reminder.end_time.strftime("%I:%M%p") %></p>
+    <p><%= reminder.start_date %> to <%= reminder.end_date %></p>
     <p class="reminder-heading"> Time </p>
-    <% reminder.time_intervals.each do |interval| %>
-        <button type="button" class="btn btn-primary mt-2"><%=interval.strftime("%I:%M %p") %></button>
-    <% end %>
+        <div class="container">
+            <div class="row">
+                <div class="col-3 border border-secondary rounded-pill" style="background-color:#6f42c1;">
+                    <p><%= reminder.time_1.strftime("%I:%M %p") %></p></div>
+                <div class="col-3 border border-secondary rounded-pill" style="background-color:#6f42c1;">
+                    <p><%= reminder.time_2.strftime("%I:%M %p") %></p></div>
+                <div class="col-3 border border-secondary rounded-pill" style="background-color:#6f42c1;">
+                    <p><%= reminder.time_3.strftime("%I:%M %p") %></p></div>
+                <div class="col-3 border border-secondary rounded-pill" style="background-color:#6f42c1;">
+                    <p><%= reminder.time_4.strftime("%I:%M %p") %></p></div>
+            </div>
+        </div>
 </div>

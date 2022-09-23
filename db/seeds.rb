@@ -44,20 +44,20 @@ end
 puts "Seeding pictures next..."
 
 # Seeding pictures based on medicine name
-Medicine.where(name: "Leftose").each do |medicine|
-  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Leftose.png'), filename: 'Leftose.png')
-  medicine.save!
-end
+# Medicine.where(name: "Leftose").each do |medicine|
+#   medicine.photo.attach(io: File.open('app/assets/images/Medicine/Leftose.png'), filename: 'Leftose.png')
+#   medicine.save!
+# end
 
-Medicine.where(name: "Zyrtec").each do |medicine|
-  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Zyrtec.png'), filename: 'Zyrtec.png')
-  medicine.save!
-end
+# Medicine.where(name: "Zyrtec").each do |medicine|
+#   medicine.photo.attach(io: File.open('app/assets/images/Medicine/Zyrtec.png'), filename: 'Zyrtec.png')
+#   medicine.save!
+# end
 
-Medicine.where(name: "Human Papillomavirus (HPV) Vaccine").each do |medicine|
-  medicine.photo.attach(io: File.open('app/assets/images/Medicine/HPV.png'), filename: 'HPV.png')
-  medicine.save!
-end
+# Medicine.where(name: "Human Papillomavirus (HPV) Vaccine").each do |medicine|
+#   medicine.photo.attach(io: File.open('app/assets/images/Medicine/HPV.png'), filename: 'HPV.png')
+#   medicine.save!
+# end
 
 puts "Seeding Users next..."
 

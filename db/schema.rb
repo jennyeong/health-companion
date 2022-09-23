@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_19_070055) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_21_130450) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,17 +59,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_070055) do
   end
 
   create_table "reminders", force: :cascade do |t|
-    t.integer "interval"
     t.date "start_date"
     t.date "end_date"
-    t.time "start_time"
-    t.time "end_time"
     t.integer "dosage"
     t.text "description"
     t.bigint "user_id"
     t.bigint "medicine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.time "time_1"
+    t.time "time_2"
+    t.time "time_3"
+    t.time "time_4"
     t.index ["medicine_id"], name: "index_reminders_on_medicine_id"
     t.index ["user_id"], name: "index_reminders_on_user_id"
   end
