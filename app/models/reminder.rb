@@ -4,7 +4,7 @@ class Reminder < ApplicationRecord
   validates_presence_of  :start_date, :end_date, :time_1 ,:dosage
   #validates_numericality_of  only_integer: true, greater_than_or_equal_to: 6
 
-  scope :sort_by_latest, -> { order(start_date: :asc, start_time: :asc) }
+  scope :sort_by_latest, -> { order(start_date: :asc) }
 
   def next_due_timestamp
     next_due = nil
