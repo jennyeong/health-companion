@@ -78,6 +78,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_23_115913) do
     t.datetime "updated_at", null: false
     t.bigint "medicine_id"
     t.string "country"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["medicine_id"], name: "index_reports_on_medicine_id"
     t.index ["user_id"], name: "index_reports_on_user_id"
   end

@@ -6,10 +6,11 @@
     <div class="form-inputs" data-controller="online">
       <%= f.input :online,
                   as: :boolean,
-                  wrapper_html: { class: 'checkbox'},
-                  label_html: { class: 'check-label' },
-                  input_html: {data: { online_target: "boolean",
-                              action: "click->online#update"}}
+                  wrapper_html: { class: 'online'},
+                  # label_html: { class: 'check-label' },
+                  input_html: { class: 'toggle',
+                                data: { online_target: "boolean",
+                                action: "click->online#update"}}
                   %>
       <%= f.input :shop_name,
                   required: false %>

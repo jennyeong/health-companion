@@ -7,6 +7,9 @@ class Report < ApplicationRecord
   validates :shop_location, :country, presence: { if: -> { shop_url.blank? } }
   validates :shop_url, presence: { if: -> { shop_location.blank? } }
 
+  geocoded_by :shop_location
+  after_validation :geocode, if: :will_save_change_to_shop_location?
+
   include PgSearch::Model
   pg_search_scope :global_search,
   against: [ :shop_name, :shop_location, :shop_url, :country ],
