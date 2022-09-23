@@ -21,4 +21,15 @@
                     <p><%= reminder.time_4.strftime("%I:%M %p") %></p></div>
             </div>
         </div>
-</div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 border border-secondary rounded-pill" style="text-color:white;">
+                <p><%=  link_to "edit", edit_reminder_path  %></p></div>
+
+            <div class="col-3 border border-secondary rounded-pill" style="text-color:white;">
+                <p><%=  link_to "delete", reminders_path %></p></div>             
+        </div>
+    </div>
+
+     </div>
