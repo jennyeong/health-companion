@@ -9,27 +9,25 @@
     <p class="reminder-heading"> Date</p>
     <p><%= reminder.start_date %> to <%= reminder.end_date %></p>
     <p class="reminder-heading"> Time </p>
-        <div class="container">
-            <div class="row">
-                <div class="col-3 border border-secondary rounded-pill" style="background-color:#6f42c1;">
-                    <p><%= reminder.time_1.strftime("%I:%M %p") %></p></div>
-                <div class="col-3 border border-secondary rounded-pill" style="background-color:#6f42c1;">
-                    <p><%= reminder.time_2.strftime("%I:%M %p") %></p></div>
-                <div class="col-3 border border-secondary rounded-pill" style="background-color:#6f42c1;">
-                    <p><%= reminder.time_3.strftime("%I:%M %p") %></p></div>
-                <div class="col-3 border border-secondary rounded-pill" style="background-color:#6f42c1;">
-                    <p><%= reminder.time_4.strftime("%I:%M %p") %></p></div>
-            </div>
-        </div>
-    <br>
+    <button type="button" class="btn btn-primary mt-1">
+        <%= reminder.time_1.strftime("%I:%M %p") %>
+    </button>
+    <button type="button" class="btn btn-primary mt-1">
+        <%= reminder.time_2.strftime("%I:%M %p") %>
+    </button>
+    <button type="button" class="btn btn-primary mt-1">
+        <%= reminder.time_3.strftime("%I:%M %p") %>
+    </button>
+    <button type="button" class="btn btn-primary mt-1">
+        <%= reminder.time_4.strftime("%I:%M %p") %>
+    </button>
     <div class="container">
         <div class="row">
             <div class="col-3 border border-secondary rounded-pill" style="text-color:white;">
-                <p><%=  link_to "edit", edit_reminder_path  %></p></div>
+                <p><%= link_to "Edit", edit_reminder_path(reminder) %></p></div>
 
             <div class="col-3 border border-secondary rounded-pill" style="text-color:white;">
-                <p><%=  link_to "delete", reminders_path %></p></div>             
+                <p><%= link_to "Delete", reminder_path(reminder), method: :delete %></p></div>             
         </div>
     </div>
-
-     </div>
+</div>
