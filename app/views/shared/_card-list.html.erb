@@ -29,7 +29,7 @@
     alt="..." style="height: 80px; border-radius: 0 12px 12px 0;"> -->
     <% if report.photos.present? %>
       <%= cl_image_tag report.photos.first.key, :transformation => {:width => 80, :height => 80, :crop => "lfill"} %>
-    <% else %>
+    <% elsif report.medicine.present? && report.medicine.photo.present? %>
       <%= image_tag report.medicine.photo, width: "80", heigh: "80" %>
     <% end %>
   </div>

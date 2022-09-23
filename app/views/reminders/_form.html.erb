@@ -1,19 +1,44 @@
-<%= simple_form_for(@reminder) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.association :medicine %>
-    <%= f.input :interval  %>
-    <%= f.input :start_date  %>
-    <%= f.input :end_date  %>
-    <%= f.input :start_time  %>
-    <%= f.input :end_time  %>
-    <%= f.input :dosage  %>
-    <%= f.input :description  %>
-  </div>
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+<div class="formated-form">
+  <%= simple_form_for(@reminder) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <h4 >Add reminder!</h4>
+    <div class="form-inputs">
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.association :medicine %>
+      <%= f.label :start_date %>
+      <input id="reminder_start_date" name="reminder[start_date]" class="form-control" type="date" />
+      <br>
+      <%= f.label :end_date  %>
+      <input id="reminder_end_date" name="reminder[end_date]" class="form-control" type="date" />
+      <br>
+      <%= f.input :dosage %>
+      <%= f.input :description %>
+      <%= f.label :time_1 %>
+      <input id="reminder_time_1" name="reminder[time_1]" class="form-control" type="time" />
+      <br>
+      <div class="time-container time-2-container">
+        <%= f.label :time_2 %>
+        <input id="reminder_time_2" name="reminder[time_2]" class="form-control" type="time" />
+        <br>
+      </div>
+      <div class="time-container time-3-container">
+        <%= f.label :time_3 %>
+        <input id="reminder_time_3" name="reminder[time_3]" class="form-control" type="time" />
+        <br>
+      </div>
+      <div class="time-container time-4-container">
+        <%= f.label :time_4 %>
+        <input id="reminder_time_4" name="reminder[time_4]" class="form-control" type="time" />
+        <br>
+      </div>
+      <div class="show-next-time-btn btn btn-default btn-small" type="button">
+        <i class="fa-solid fa-plus">&nbsp; Add Time</i>
+      </div>
+      
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
   <% end %>
+</div>
