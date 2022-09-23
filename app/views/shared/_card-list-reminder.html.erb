@@ -2,14 +2,15 @@
   <div class="ka-left">
     <p><small><%= reminder.next_due_timestamp&.strftime("%I:%M %p") %></small></p>
     <% if reminder.next_due_timestamp.present? %>
-      <h5><%= link_to "#{reminder.medicine.name} in #{distance_of_time_in_words(Time.current, reminder.next_due_timestamp)}", reminder, class: "no-link-decoration" %> </h5>
+      <h5><%= link_to "#{reminder.medicine.name}".truncate(20), reminder, class: "no-link-decoration" %> </h5>
+      <h6> in <%= distance_of_time_in_words(Time.current, reminder.next_due_timestamp) %></h6>
     <% else %>
-      <h5><%= link_to "#{reminder.medicine.name}", reminder, class: "no-link-decoration" %> </h5>
+      <h5><%= link_to "#{reminder.medicine.name}".truncate(20), reminder, class: "no-link-decoration" %> </h5>
     <% end %>
     <p><small><%= reminder.description %></small></p>
   </div>
 
   <div class="ka-right">
-    <img src="https://gphb01pdazurefileshare.blob.core.windows.net/sys-master-hybris-media/h90/h03/16431885418526/601435-leftose-tablets-30-tablets-1-800Wx800H" alt="..." style="height: 80px; border-radius: 0 12px 12px 0;">
+    <img src="https://gphb01pdazurefileshare.blob.core.windows.net/sys-master-hybris-media/h90/h03/16431885418526/601435-leftose-tablets-30-tablets-1-800Wx800H" alt="..." style="height: 101px; border-radius: 0 12px 12px 0;">
   </div>
 </div>

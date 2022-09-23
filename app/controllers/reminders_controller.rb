@@ -3,7 +3,8 @@ class RemindersController < ApplicationController
 
   # GET /reminders or /reminders.json
   def index
-    @reminders = Reminder.all
+    @active_reminders = Reminder.active_reminders_for(current_user)
+    @completed_reminders = Reminder.completed_reminders_for(current_user)
     @reminder = Reminder.new
   end
 
@@ -53,7 +54,7 @@ class RemindersController < ApplicationController
     @reminder.destroy
 
     respond_to do |format|
-      format.html { redirect_to reminders_url, status: :see_other notice: "Reminder was successfully deleted." }
+      format.html { redirect_to reminders_url, status: :see_other, notice: "Reminder was successfully deleted." }
       format.json { head :no_content }
     end
   end
