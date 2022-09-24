@@ -6,7 +6,7 @@
       <h5 class= "no-link-decoration"><%= "#{reminder.medicine.name}".truncate(20) %></h5>
       <h6> in <%= distance_of_time_in_words(Time.current, reminder.next_due_timestamp) %></h6>
     <% else %>
-      <h5><%= link_to "#{reminder.medicine.name}".truncate(20), reminder, class: "no-link-decoration" %> </h5>
+      <h5 class= "no-link-decoration"><%= "#{reminder.medicine.name}".truncate(20) %></h5>
     <% end %>
     <p><small><%= reminder.description %></small></p>
   </div>
