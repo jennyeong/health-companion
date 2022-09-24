@@ -1,4 +1,4 @@
-<div class="formated-form h-100">
+<div class="formated-form h-100 py-4">
   <%= simple_form_for(@reminder) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -9,24 +9,24 @@
     <% end %>
     <div class="form-inputs">
       <%= f.hidden_field :user_id, value: current_user.id %>
-      <%= f.association :medicine %>
-      <%= f.label :start_date %>
+      <%= f.association :medicine, required: false %>
+      <%= f.label :start_date, required: false %>
       <% if @reminder.start_date.present? %>
         <input id="reminder_start_date" name="reminder[start_date]" class="form-control" type="date" value="<%= @reminder.start_date.strftime('%Y-%m-%d') %>" />
       <% else %>
         <input id="reminder_start_date" name="reminder[start_date]" class="form-control" type="date" />
       <% end %>
       <br>
-      <%= f.label :end_date  %>
+      <%= f.label :end_date, required: false  %>
       <% if @reminder.end_date.present? %>
         <input id="reminder_end_date" name="reminder[end_date]" class="form-control" type="date" value="<%= @reminder.end_date.strftime('%Y-%m-%d') %>" />
       <% else %>
         <input id="reminder_end_date" name="reminder[end_date]" class="form-control" type="date" />
       <% end %>
       <br>
-      <%= f.input :dosage %>
-      <%= f.input :description %>
-      <%= f.label :time_1 %>
+      <%= f.input :dosage, required: false %>
+      <%= f.input :description, required: false %>
+      <%= f.label :time_1, required: false %>
       <% if @reminder.time_1.present? %>
         <input id="reminder_time_1" name="reminder[time_1]" class="form-control" type="time" value="<%= @reminder.time_1.strftime('%H:%M') %>" />
       <% else %>
@@ -34,7 +34,7 @@
       <% end %>
       <br>
       <div class="time-container <%= @reminder.time_2.present? ? '' : 'hide' %> time-2-container">
-        <%= f.label :time_2 %>
+        <%= f.label :time_2, required: false %>
         <% if @reminder.time_2.present? %>
           <input id="reminder_time_2" name="reminder[time_2]" class="form-control" type="time" value="<%= @reminder.time_2.strftime('%H:%M') %>" />
         <% else %>
@@ -43,7 +43,7 @@
         <br>
       </div>
       <div class="time-container <%= @reminder.time_3.present? ? '' : 'hide' %> time-3-container">
-        <%= f.label :time_3 %>
+        <%= f.label :time_3, required: false %>
         <% if @reminder.time_3.present? %>
           <input id="reminder_time_3" name="reminder[time_3]" class="form-control" type="time" value="<%= @reminder.time_3.strftime('%H:%M') %>" />
         <% else %>
@@ -52,7 +52,7 @@
         <br>
       </div>
       <div class="time-container <%= @reminder.time_4.present? ? '' : 'hide' %> time-4-container">
-        <%= f.label :time_4 %>
+        <%= f.label :time_4, required: false %>
         <% if @reminder.time_4.present? %>
           <input id="reminder_time_4" name="reminder[time_4]" class="form-control" type="time" value="<%= @reminder.time_4.strftime('%H:%M') %>" />
         <% else %>
@@ -60,8 +60,10 @@
         <% end %>
         <br>
       </div>
-      <div class="show-next-time-btn btn btn-default btn-small <%= @reminder.time_4.present? ? 'hide' : '' %>" type="button">
-        <i class="fa-solid fa-plus">&nbsp; Add Time</i>
+      <div id="add-time">
+        <div class="show-next-time-btn btn btn-default btn-small px-0 d-flex align-items-center <%= @reminder.time_4.present? ? 'hide' : '' %>" type="button">
+          <i class="fa-solid fa-plus"></i><p class="m-0 px-1">Add Time</p>
+        </div>
       </div>
     </div>
     <div class="form-actions">

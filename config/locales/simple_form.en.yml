@@ -16,6 +16,9 @@ en:
         country: 'Country'
         effects: 'Effects'
         comments: 'Comments'
+      reminder:
+        dosage: 'Dosage'
+        description: 'Description'
       user:
         first_name: 'First name'
         last_name: 'Last name'
