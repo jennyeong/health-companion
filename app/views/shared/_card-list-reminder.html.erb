@@ -1,8 +1,9 @@
+<%= link_to reminder_path(reminder) do %>
 <div class="ka reminders">
   <div class="ka-left">
     <p><small><%= reminder.next_due_timestamp&.strftime("%I:%M %p") %></small></p>
     <% if reminder.next_due_timestamp.present? %>
-      <h5><%= link_to "#{reminder.medicine.name}".truncate(20), reminder, class: "no-link-decoration" %> </h5>
+      <h5 class= "no-link-decoration"><%= "#{reminder.medicine.name}".truncate(20) %></h5>
       <h6> in <%= distance_of_time_in_words(Time.current, reminder.next_due_timestamp) %></h6>
     <% else %>
       <h5><%= link_to "#{reminder.medicine.name}".truncate(20), reminder, class: "no-link-decoration" %> </h5>
@@ -11,6 +12,8 @@
   </div>
 
   <div class="ka-right">
-    <img src="https://gphb01pdazurefileshare.blob.core.windows.net/sys-master-hybris-media/h90/h03/16431885418526/601435-leftose-tablets-30-tablets-1-800Wx800H" alt="..." style="height: 101px; border-radius: 0 12px 12px 0;">
+    <%# <img src="https://gphb01pdazurefileshare.blob.core.windows.net/sys-master-hybris-media/h90/h03/16431885418526/601435-leftose-tablets-30-tablets-1-800Wx800H" alt="..." style="height: 101px; border-radius: 0 12px 12px 0;"> %>
+    <%= image_tag reminder.medicine.photo, width: "101", heigh: "101" %>
   </div>
 </div>
+<% end %>
