@@ -3,7 +3,6 @@
   background: #384047;
   font-family: sans-serif;
   font-size: 10px;
-  height: 840px;
   form {
     background: #fff;
     padding: 4em 4em 2em;
@@ -148,11 +147,12 @@
 }
 
 .login {
+  height: 840px;
   padding-top: 4rem;
 }
 
 .other-form {
-  padding-top: 1.5rem;
+  height: 100%;
 }
 
 .toggle {
