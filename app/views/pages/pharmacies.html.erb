@@ -1,4 +1,16 @@
-<h1>Pharmacies Nearby</h1>
-<%# <%= provide :title, "Pharmacies Nearby" %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+  <div class="navbar-title">
+    <%= link_to :back, class: "navbar-brand" do %>
+      <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+    <h2 class="navbar-brand">Pharmacies Nearby</h2>
+  </div>
+    <div class = "logo">
+      <%= image_tag("New-logo.svg") %>
+    </div>
+  </div>
+</div>
 
-<div data-controller='map' id='map' data-map-api-key-value='<%= ENV['MAPBOX_API_KEY'] %>' style='width: 100%; height: 745px;'></div>
+
+<div data-controller='map' id='map' data-map-api-key-value='<%= ENV['MAPBOX_API_KEY'] %>' style='width: 100%; height: 88vh;'></div>
