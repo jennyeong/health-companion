@@ -13,4 +13,8 @@
 </div>
 
 
-<div data-controller='map' id='map' data-map-api-key-value='<%= ENV['MAPBOX_API_KEY'] %>' style='width: 100%; height: 740px;'></div>
+<div style='width: 100%; height: 740px;'
+  id='map'
+  data-controller='map'
+  data-map-api-key-value='<%= ENV['MAPBOX_API_KEY'] %>'
+  data-map-markers-value='<%= @markers.to_json %>'></div>
