@@ -20,8 +20,72 @@ a.no-link-decoration {
   text-decoration: inherit;
   /* no underline */
 }
-.reminder-heading {
-  font-weight: 600;
+
+.reminder-overall {
+  padding: 2rem 1rem;
+  background: #384047;
+  height: 840px;
+  .reminder-content {
+    border-radius: 2px;
+    box-shadow: 0 0 1em #222;
+    background-color: #fff;
+    max-width: 380px;
+  }
+
+  .text-muted {
+    color: #6c757d !important;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  .text-content {
+    color: #6750A4;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .reminder-program {
+    padding: 0 1.5rem;
+    .text-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+    .text-time {
+      margin-bottom: 1rem;
+      color: #6c757d !important;
+      font-size: 16px;
+    }
+  }
+
+  .reminder-link {
+    padding: 2rem 3rem;
+    .btn {
+      width: 100%;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+      box-shadow: 0 3px 0 0 #513f82;
+      border-radius: 2px;
+      border: none;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    .btn-delete {
+      background-color: #bdb2d6;
+      box-shadow: 0 3px 0 0 #aca2c2;
+    }
+  }
+
+}
+
+.reminder-medicine {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .format-padding{
@@ -38,5 +102,6 @@ a.no-link-decoration {
 }
 
 #add-time {
-  padding-right: 208px !important;
+  white-space: nowrap;
+
 }
