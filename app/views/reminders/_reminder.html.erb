@@ -1,40 +1,44 @@
 <%= render "shared/navbar" %>
-<div id="<%= dom_id reminder %>" class="text-center">
-    <br>
-    <br>
-    <div>
-        <%= link_to "Edit", edit_reminder_path(@reminder), data: { method: :get, turbo: false } %> |
-        <%= link_to "Delete", @reminder, data: { "turbo-method": :delete }, style: "color: red;" %>
+<div id="<%= dom_id reminder %>" class="reminder-overall">
+<div class="reminder-content">
+  <div class="reminder-medicine">
+    <%= image_tag reminder.medicine.photo, width: "150", heigh: "150" %>
+    <div class="reminder-heading">
+      <p class="text-muted"> Medicine name</p>
+      <p class="text-content"><%= reminder.medicine.name %></p>
+      <p class="text-muted"> Dose</p>
+      <p class="text-content"><%= reminder.dosage %></p>
+      <p class="text-muted"> Description </p>
+      <p class="text-content"><%= reminder.description %></p>
     </div>
-    <br>
-    <br>
-    <%= image_tag "Medicine/image-7.png" %>
-    <p class="reminder-heading"> Medicine name</p>
-    <p><%= reminder.medicine.name %></p>
-    <p class="reminder-heading"> Dose</p>
-    <p><%= reminder.dosage %></p>
-    <p class="reminder-heading"> Description </p>
-    <p><%= reminder.description %></p>
-    <p class="reminder-heading"> Date</p>
-    <p><%= reminder.start_date %> to <%= reminder.end_date %></p>
-    <p class="reminder-heading"> Time </p>
-    <button type="button" class="btn btn-primary mt-1">
-        <%= reminder.time_1.strftime("%I:%M %p") %>
+  </div>
+  <div class="reminder-program">
+    <p class="text-title">Program</p>
+    <p class="text-time">Total <%= pluralize( (reminder.end_date - reminder.start_date).to_i + 1, 'day' ) %> |
+    <% if (reminder.end_date - Date.today).to_i < 0 %>
+      0 days left</p>
+    <% else %>
+      <%= pluralize( (reminder.end_date - Date.today).to_i, 'day' ) %> left</p>
+    <% end %>
+    <p class="text-title">Take at</p>
+    <div class="text-time">
+      <%= reminder.time_1.strftime("%I:%M %p") %>
+      <% if reminder.time_2.present? %>
+        | <%= reminder.time_2.strftime("%I:%M %p") %>
+      <% end %>
+      <% if reminder.time_3.present? %>
+        | <%= reminder.time_3.strftime("%I:%M %p") %>
+      <% end %>
+      <% if reminder.time_4.present? %>
+        | <%= reminder.time_4.strftime("%I:%M %p") %>
+      <% end %>
+    </div>
+  </div>
+  <div class="reminder-link">
+      <%= link_to "Change Schedule", edit_reminder_path(@reminder), data: { method: :get, turbo: false }, type: "button", class: "btn btn-primary mt-1" %>
+    <button type="button" class="btn btn-primary btn-delete mt-1">
+      <%= link_to "Delete Reminder", @reminder, data: { "turbo-method": :delete } %>
     </button>
-    <% if reminder.time_2.present? %>
-        <button type="button" class="btn btn-primary mt-1">
-            <%= reminder.time_2.strftime("%I:%M %p") %>
-        </button>
-    <% end %>
-    <% if reminder.time_3.present? %>
-        <button type="button" class="btn btn-primary mt-1">
-            <%= reminder.time_3.strftime("%I:%M %p") %>
-        </button>
-    <% end %>
-    <% if reminder.time_4.present? %>
-        <button type="button" class="btn btn-primary mt-1">
-            <%= reminder.time_4.strftime("%I:%M %p") %>
-        </button>
-    <% end %>
-    </div>
+  </div>
+</div>
 </div>
