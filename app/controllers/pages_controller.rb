@@ -19,7 +19,4 @@ class PagesController < ApplicationController
 
   def information
   end
-
-  def pharmacies
-  end
 end

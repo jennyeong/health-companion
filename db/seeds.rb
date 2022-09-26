@@ -86,4 +86,12 @@ CSV.foreach(filepath_offline, headers: :first_row) do |row|
   Report.create(shop_name: shop_name, shop_location: shop_location, country: country, effects: effects, comments: comments, medicine_id: medicine.id, user_id: user.id)
 end
 
+puts "Seeding pharmacies next..."
+
+Pharmacy.create(name: "Guardian Singapore", address: "20 Ah Hood Rd, Singapore")
+Pharmacy.create(name: "Guardian Singapore", address: "38 Irrawaddy Rd, Singapore")
+Pharmacy.create(name: "Thomson Retail Pharmacy", address: "339 Thomson Rd, Singapore")
+Pharmacy.create(name: "Unity Novena Square", address: "238 Thomson Rd, Singapore")
+Pharmacy.create(name: "Farrer Park Pharmacy", address: "1 Farrer Park Station Rd, Singapore")
+
 puts "Seeding database complete!"
