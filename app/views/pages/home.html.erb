@@ -22,7 +22,7 @@
 <% if !current_user.nil? %>
   <div class="list-container">
     <div class="list-title">
-      <p><strong>Reminders</strong></p>
+      <p><strong>Reminder</strong></p>
       <%= link_to new_reminder_path, data: {turbo: :false} do %>
         <i class="fa-solid fa-plus"></i>
       <% end %>
@@ -31,7 +31,7 @@
     <% if Reminder.active_reminders_for(current_user.id).present? %>
       <%= render partial: "shared/card-list-reminder", locals: {reminder: Reminder.active_reminders_for(current_user.id).first} %>
     <% else %>
-      <p class="no-reminder-msg"><small>No reminders</small></p>
+      <p class="no-reminder-msg"><small>No reminder</small></p>
     <% end %>
   </div>
 <% end %>
