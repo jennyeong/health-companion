@@ -22,7 +22,7 @@
 <% if !current_user.nil? %>
   <div class="list-container">
     <div class="list-title">
-      <p><strong>Reminder</strong></p>
+      <p><strong>Reminders</strong></p>
       <%= link_to new_reminder_path, data: {turbo: :false} do %>
         <i class="fa-solid fa-plus"></i>
       <% end %>
@@ -38,7 +38,7 @@
 
 <div class="list-container">
   <div class="list-title">
-    <p><strong>Latest Alerts</strong></p>
+    <p><strong>Latest Reports</strong></p>
     <%= link_to reports_path do %>
       <p>See all</p>
     <% end %>
