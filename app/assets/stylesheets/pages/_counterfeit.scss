@@ -100,7 +100,8 @@
   top: -2rem;
 
   .report-form-btn {
-    padding: 10px 105px;
+    width: 310px;
+    white-space: nowrap;
   }
 }
 
@@ -113,7 +114,7 @@
   margin-top: 0.5rem;
 
   .pharmacies-btn {
-    padding: 10px 70px;
+    width: 310px;
     background-color: #bdb2d6;
     border-color: #bdb2d6;
   }
