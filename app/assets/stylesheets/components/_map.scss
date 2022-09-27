@@ -17,3 +17,10 @@
     height: 20px;
   }
 }
+
+.mapboxgl-ctrl-bottom-left {
+  z-index: 0 !important;
+}
+.mapboxgl-ctrl-bottom-right {
+  z-index: 0 !important;
+}
