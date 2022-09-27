@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post "/medicine", to: "medicines#scanning"
   get "/counterfeit", to: "pages#counterfeit"
   get "/information", to: "pages#information"
-  get "/pharmacies", to: "pharmacies#pharmacies"
+  get "/pharmacies", to: "pharmacies#index"
 
   # get "/serializations/:id", to: "serializations#show", path: :successful
   resources :serializations, only: [:show], path: :successful
