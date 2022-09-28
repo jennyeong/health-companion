@@ -139,11 +139,6 @@ Medicine.where(name: "Afrin").each do |medicine|
   medicine.save!
 end
 
-Medicine.where(name: "Milo").each do |medicine|
-  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Milo.jpg'), filename: 'Milo.jpg')
-  medicine.save!
-end
-
 puts "Seeding Users next..."
 
 # Seeding Users
