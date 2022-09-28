@@ -59,6 +59,91 @@ Medicine.where(name: "Human Papillomavirus (HPV) Vaccine").each do |medicine|
   medicine.save!
 end
 
+Medicine.where(name: "Panadol").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/panadol.jpg'), filename: 'panadol.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Watermelon Frost Lozenges").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/watermelon-lozenges.jpg'), filename: 'watermelon-lozenges.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Telfast").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Telfast.jpg'), filename: 'Telfast.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Buscopan").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/buscopan.png'), filename: 'buscopan.png')
+  medicine.save!
+end
+
+Medicine.where(name: "Dulcoease").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Dulcoease.jpg'), filename: 'Dulcoease.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Maalox").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Maalox.jpg'), filename: 'Maalox.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Nasacort").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Nasacort.png'), filename: 'Nasacort.png')
+  medicine.save!
+end
+
+Medicine.where(name: "Phenergan 10").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/phenergan.jpg'), filename: 'phenergan.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "PediaSure").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Pediasure.png'), filename: 'Pediasure.png')
+  medicine.save!
+end
+
+Medicine.where(name: "Lumereca Hypromellose Eye Drop").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Lumecare.jpg'), filename: 'Lumecare.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Scott's Vitamin C").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Scott Vitamin C.png'), filename: 'Scott Vitamin C.png')
+  medicine.save!
+end
+
+Medicine.where(name: "Delstrigo").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/delstrigo.jpg'), filename: 'delstrigo.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Dayquil").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Dayquil.jpg'), filename: 'Dayquil.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Aleve").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Aleve.jpg'), filename: 'Aleve.jpg')
+  medicine.save!
+end
+
+Medicine.where(name: "Eno").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Eno.png'), filename: 'Eno.png')
+  medicine.save!
+end
+
+Medicine.where(name: "Afrin").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Afrin.png'), filename: 'Afrin.png')
+  medicine.save!
+end
+
+Medicine.where(name: "Milo").each do |medicine|
+  medicine.photo.attach(io: File.open('app/assets/images/Medicine/Milo.jpg'), filename: 'Milo.jpg')
+  medicine.save!
+end
+
 puts "Seeding Users next..."
 
 # Seeding Users
