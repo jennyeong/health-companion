@@ -18,6 +18,7 @@ filepath_offline = "lib/seeds/reports_offline_seed.csv"
 
 puts "Clearing up database..."
 Medicine.destroy_all
+Pharmacy.destroy_all
 # User.destroy_all
 
 CSV.foreach(filepath_med, headers: :first_row) do |row|
@@ -168,10 +169,21 @@ end
 
 puts "Seeding pharmacies next..."
 
-Pharmacy.create(name: "Guardian Singapore", address: "20 Ah Hood Rd, Singapore")
-Pharmacy.create(name: "Guardian Singapore", address: "38 Irrawaddy Rd, Singapore")
-Pharmacy.create(name: "Thomson Retail Pharmacy", address: "339 Thomson Rd, Singapore")
-Pharmacy.create(name: "Unity Novena Square", address: "238 Thomson Rd, Singapore")
 Pharmacy.create(name: "Farrer Park Pharmacy", address: "1 Farrer Park Station Rd, Singapore")
+Pharmacy.create(name: "Watsons Singapore", address: "180 Kitcherner Road, Singapore")
+Pharmacy.create(name: "Watsons Singapore", address: "101 Towner Rd, Singapore")
+Pharmacy.create(name: "Guardian", address: "180 Kitchener Road, Singapore")
+Pharmacy.create(name: "Guardian", address: "50 Kallang Rd, Singapore")
+Pharmacy.create(name: "Poisson Pharma", address: "682 Race Course Rd, Singapore")
+Pharmacy.create(name: "Unity", address: "Kitchener Rd, Singapore")
+Pharmacy.create(name: "Watsons Singapore", address: "238 Thomson Rd, Singapore")
+Pharmacy.create(name: "Watsons Singapore", address: "190 Lor 6 Toa Payoh, Singapore")
+Pharmacy.create(name: "Watsons Singapore", address: "51 Upper Serangoon Rd, Singapore")
+Pharmacy.create(name: "Guardian", address: "2 Serangoon Rd, Singapore")
+Pharmacy.create(name: "Guardian", address: "68 Orchard Road, Singapore")
+Pharmacy.create(name: "Guardian", address: "101 Thomson Rd, Singapore")
+Pharmacy.create(name: "Guardian", address: "238 Thomson Road, Singapore")
+Pharmacy.create(name: "Unity", address: "68 Orchard Rd, Singapore")
+Pharmacy.create(name: "Unity", address: "20 Ah Hood Rd, Singapore")
 
 puts "Seeding database complete!"
