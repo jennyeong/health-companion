@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :scanning, :successful, :counterfeit, :information]
+  skip_before_action :authenticate_user!, only: [:home, :scanning, :counterfeit, :information]
 
   def home
     @reports = Report.order(created_at: :desc).limit(5)
@@ -8,11 +8,10 @@ class PagesController < ApplicationController
   def scanning
   end
 
-  def successful
-    @leftose = Medicine.where(name: "Leftose").first
-    # raise
-    puts @medicine
-  end
+  # def successful
+  # @leftose = Medicine.where(name: "Leftose").first
+  # puts @medicine
+  # end
 
   def counterfeit
   end

@@ -30,7 +30,7 @@
                   required: false %>
       <%= f.input :comments,
                   required: false %>
-      <%= f.association :medicine,
+      <%= f.association :medicine, collection: Medicine.order('name ASC'),
                   required: false %>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 

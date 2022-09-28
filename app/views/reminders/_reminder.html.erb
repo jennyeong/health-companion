@@ -35,8 +35,8 @@
     </div>
   </div>
   <div class="reminder-link">
-      <%= link_to "Change Schedule", edit_reminder_path(@reminder), data: { method: :get, turbo: false }, type: "button", class: "btn btn-primary mt-1" %>
-    <button type="button" class="btn btn-primary btn-delete mt-1">
+      <%= link_to "Change Schedule", edit_reminder_path(@reminder), data: { method: :get, turbo: false }, type: "button", class: "btn btn-primary" %>
+    <button type="button" class="btn btn-primary btn-delete">
       <%= link_to "Delete Reminder", @reminder, data: { "turbo-method": :delete } %>
     </button>
   </div>
