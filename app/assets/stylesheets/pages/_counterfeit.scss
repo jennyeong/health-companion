@@ -100,8 +100,9 @@
   top: -2rem;
 
   .report-form-btn {
-    width: 310px;
+    width: 300px;
     white-space: nowrap;
+    border: none;
   }
 }
 
@@ -111,11 +112,15 @@
   align-items: center;
   position: relative;
   top: -2rem;
-  margin-top: 0.5rem;
+  margin-top: 10px;
 
   .pharmacies-btn {
-    width: 310px;
+    width: 300px;
+    white-space: nowrap;
     background-color: #bdb2d6;
-    border-color: #bdb2d6;
+    border: none;
+    &:hover {
+      background-color: #b3a9c9;
+    }
   }
 }

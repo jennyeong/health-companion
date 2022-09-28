@@ -9,7 +9,7 @@
     <% end %>
     <div class="form-inputs">
       <%= f.hidden_field :user_id, value: current_user.id %>
-      <%= f.association :medicine, required: false %>
+      <%= f.association :medicine, collection: Medicine.order('name ASC'), required: false %>
       <%= f.label :start_date, required: false %>
       <% if @reminder.start_date.present? %>
         <input id="reminder_start_date" name="reminder[start_date]" class="form-control" type="date" value="<%= @reminder.start_date.strftime('%Y-%m-%d') %>" />

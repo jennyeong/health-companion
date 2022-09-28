@@ -60,13 +60,11 @@ a.no-link-decoration {
     padding: 2rem 3rem;
     .btn {
       width: 100%;
-      height: 48px;
+      white-space: nowrap;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 10px 0;
-      box-shadow: 0 3px 0 0 #513f82;
-      border-radius: 60px;
       border: none;
       a {
         color: white;
@@ -75,7 +73,9 @@ a.no-link-decoration {
     }
     .btn-delete {
       background-color: #bdb2d6;
-      box-shadow: 0 3px 0 0 #aca2c2;
+      &:hover {
+        background-color: #b3a9c9;
+      }
     }
   }
 
