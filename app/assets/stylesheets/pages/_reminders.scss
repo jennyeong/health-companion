@@ -34,7 +34,7 @@ a.no-link-decoration {
     box-shadow: 0 0 1em #222;
     border-radius: 2px;
     width: 380px;
-    max-height: 560px;
+    height: fit-content;
   }
 
   .text-muted {
@@ -63,6 +63,7 @@ a.no-link-decoration {
 
   .reminder-link {
     padding: 2rem 3rem;
+    margin-bottom: 1rem;
     .btn {
       width: 100%;
       height: 44px;
@@ -95,7 +96,7 @@ a.no-link-decoration {
 }
 
 .reminder-heading {
-  max-width: 150px;
+  max-width: 180px;
 }
 
 .format-padding{
