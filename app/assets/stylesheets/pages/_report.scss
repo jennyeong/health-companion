@@ -1,20 +1,23 @@
 .report {
-  $button: #6750A4;
+  // $button: #6750A4;
   background: #384047;
   font-family: sans-serif;
-  height: auto;
+  min-height: 840px;
   padding-top: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: min(2rem);
+  display: flex;
+  justify-content: center;
+  // padding-left: 1rem;
+  // padding-right: 1rem;
   p {
     font-size: 14px;
   }
   .report-container {
-    background: #fff;
-    max-width: 380px;
+    background-color: #fff;
     box-shadow: 0 0 1em #222;
     border-radius: 2px;
+    width: 380px;
+    height: fit-content;
     padding: 2px;
     .mapboxgl-ctrl-bottom-left {
       z-index: 0 !important;

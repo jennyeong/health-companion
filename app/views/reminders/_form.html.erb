@@ -3,7 +3,7 @@
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
     <% if @reminder.new_record? %>
-      <h4 >Add reminder!</h4>
+      <h4>Add reminder!</h4>
     <% else %>
       <h4>Edit reminder!</h4>
     <% end %>
@@ -65,7 +65,11 @@
       </div>
     </div>
     <div class="form-actions">
-      <%= f.button :submit, "Add Schedule" %>
+      <% if @reminder.new_record? %>
+        <%= f.button :submit, "Add Schedule" %>
+      <% else %>
+        <%= f.button :submit, "Edit Schedule" %>
+      <% end %>
     </div>
   <% end %>
 </div>

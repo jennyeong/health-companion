@@ -22,14 +22,19 @@ a.no-link-decoration {
 }
 
 .reminder-overall {
-  padding: 2rem 1rem;
   background: #384047;
-  height: 840px;
+  font-family: sans-serif;
+  min-height: 840px;
+  padding-top: 2rem;
+  padding-bottom: min(2rem);
+  display: flex;
+  justify-content: center;
   .reminder-content {
-    border-radius: 2px;
-    box-shadow: 0 0 1em #222;
     background-color: #fff;
-    max-width: 380px;
+    box-shadow: 0 0 1em #222;
+    border-radius: 2px;
+    width: 380px;
+    max-height: 560px;
   }
 
   .text-muted {
